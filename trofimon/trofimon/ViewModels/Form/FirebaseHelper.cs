@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using trofimon.Models;
 
-namespace trofimon.ViewModels
+namespace XF_Login.ViewModel
 {
-    public static class FirebaseHelper
+    public class FirebaseHelper
     {
-        //Connect app with firebase using API Url  
+        //Conexão a Base Dados firebase 
         public static FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
 
-        //Read All    
-        public static async Task<List<Users>> GetAllUsers()
+        //Read All
+        public static async Task<List<Users>> GetAllUser()
         {
             try
             {
@@ -25,7 +25,6 @@ namespace trofimon.ViewModels
                 .OnceAsync<Users>()).Select(item =>
                 new Users
                 {
-                    Username = item.Object.Username,
                     Email = item.Object.Email,
                     Password = item.Object.Password
                 }).ToList();
@@ -38,12 +37,12 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Read     
+        //Read 
         public static async Task<Users> GetUser(string email)
         {
             try
             {
-                var allUsers = await GetAllUsers();
+                var allUsers = await GetAllUser();
                 await firebase
                 .Child("Users")
                 .OnceAsync<Users>();
@@ -56,14 +55,14 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Inser a user    
-        public static async Task<bool> AddUser(string username, string email, string password)
+        //Inser a user
+        public static async Task<bool> AddUser(string email, string password)
         {
             try
             {
                 await firebase
                 .Child("Users")
-                .PostAsync(new Users() {Username = username, Email = email, Password = password });
+                .PostAsync(new Users() { Email = email, Password = password });
                 return true;
             }
             catch (Exception e)
@@ -73,8 +72,8 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Update     
-        public static async Task<bool> UpdateUser(string username, string email, string password)
+        //Update 
+        public static async Task<bool> UpdateUser(string email, string password)
         {
             try
             {
@@ -84,7 +83,7 @@ namespace trofimon.ViewModels
                 await firebase
                 .Child("Users")
                 .Child(toUpdateUser.Key)
-                .PutAsync(new Users() { Username = username, Email = email, Password = password });
+                .PutAsync(new Users() { Email = email, Password = password });
                 return true;
             }
             catch (Exception e)
@@ -94,7 +93,7 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Delete User    
+        //Delete User
         public static async Task<bool> DeleteUser(string email)
         {
             try
