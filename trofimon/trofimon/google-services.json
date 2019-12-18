@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "449623028164",
+    "firebase_url": "https://trofimon-pap.firebaseio.com",
+    "project_id": "trofimon-pap",
+    "storage_bucket": "trofimon-pap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449623028164:android:d30ad1fab1540c4a0db491",
+        "android_client_info": {
+          "package_name": "com.ArturQuaresma.trofimon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449623028164-9tk12s1lrm96i8ur0vdq5k7uoqf0n4oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ArturQuaresma.trofimon",
+            "certificate_hash": "c80fd12c92c35cf15c4f7eccba7548fda839f98b"
+          }
+        },
+        {
+          "client_id": "449623028164-gk9sooouhsnjgbjunbo8b4k16raclqg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZLfkjBxmSDb55mx_pliWVP0EH3dMNq5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449623028164-gk9sooouhsnjgbjunbo8b4k16raclqg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
