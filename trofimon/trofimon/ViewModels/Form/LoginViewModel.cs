@@ -7,7 +7,7 @@ using Xamarin.Forms;
 using trofimon.Views;
 using trofimon;
 
-namespace XF_Login.ViewModel
+namespace trofimon.ViewModel
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
@@ -47,7 +47,7 @@ namespace XF_Login.ViewModel
         {
             get
             {
-                return new Command(() => { App.Current.MainPage.Navigation.PushAsync(new XF_SignUpPage()); });
+                return new Command(() => { App.Current.MainPage.Navigation.PushAsync(new Page1(email)); });
             }
         }
 

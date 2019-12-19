@@ -12,9 +12,12 @@ namespace trofimon.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
-        public Page1()
+        Page1 page1;
+        public Page1(string email)
         {
             InitializeComponent();
+            page1 = new Page1(email);
+            BindingContext = page1;
         }
     }
 }

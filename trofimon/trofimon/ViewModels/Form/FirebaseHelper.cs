@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using trofimon.Models;
 
-namespace XF_Login.ViewModel
+namespace trofimon.ViewModel
 {
     public class FirebaseHelper
     {

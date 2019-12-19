@@ -4,12 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="trofimon.Views.Page1">
+             x:Class="trofimon.Views.Page1"
+             NavigationPage.HasBackButton="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name = "Email" Placeholder = "Email" Text="{Binding Email}"
+                   HeightRequest = "40"
+                   Keyboard = "Email"/>
+            <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Password"
+                   HeightRequest = "40"
+                   IsPassword = "True"/>
+            <Button x:Name= "loginbtn" Text = "Login " 
+                    Command="{Binding LoginCommand}"
+                    HorizontalOptions = "FillAndExpand"/>
+            <Button x:Name="signup" Text="SignUp" Command="{Binding SignUp}" HorizontalOptions="End"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

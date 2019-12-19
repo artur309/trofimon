@@ -17,8 +17,8 @@ namespace trofimon
         {
             InitializeComponent();
             //MainPage = new MainPage();
-
-            MainPage = new NavigationPage(new Views.Form.Intro());
+            MainPage = new NavigationPage(new FormTab());
+            //MainPage = new NavigationPage(new Views.Form.Intro());
         }
 
         protected override void OnStart()
