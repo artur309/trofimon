@@ -3,6 +3,10 @@ add.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-200.png
 Assets\LargeTile.scale-400.png
+Assets\Montserrat-Bold.ttf
+Assets\Montserrat-Medium.ttf
+Assets\Montserrat-Regular.ttf
+Assets\Montserrat-SemiBold.ttf
 Assets\SmallTile.scale-100.png
 Assets\SmallTile.scale-200.png
 Assets\SmallTile.scale-400.png
@@ -24,11 +28,13 @@ Assets\Square44x44Logo.targetsize-48.png
 Assets\StoreLogo.scale-100.png
 Assets\StoreLogo.scale-200.png
 Assets\StoreLogo.scale-400.png
+Assets\UIFontIcons.ttf
 Assets\Wide310x150Logo.scale-100.png
 Assets\Wide310x150Logo.scale-200.png
 Assets\Wide310x150Logo.scale-400.png
 App.xbf
 MainPage.xbf
+Microsoft.UI.Xaml\DensityStyles\Compact.xbf
 trofimon.UWP.xr.xml
 Properties\Default.rd.xml
 xamarin_logo.png
