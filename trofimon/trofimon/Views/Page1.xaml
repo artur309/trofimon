@@ -8,16 +8,7 @@
              NavigationPage.HasBackButton="False">
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name = "Email" Placeholder = "Email" Text="{Binding Email}"
-                   HeightRequest = "40"
-                   Keyboard = "Email"/>
-            <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Password"
-                   HeightRequest = "40"
-                   IsPassword = "True"/>
-            <Button x:Name= "loginbtn" Text = "Login " 
-                    Command="{Binding LoginCommand}"
-                    HorizontalOptions = "FillAndExpand"/>
-            <Button x:Name="signup" Text="SignUp" Command="{Binding SignUp}" HorizontalOptions="End"/>
+            <Label Text="Nigga"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

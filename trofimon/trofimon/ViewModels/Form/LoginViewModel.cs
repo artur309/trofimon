@@ -47,7 +47,7 @@ namespace trofimon.ViewModel
         {
             get
             {
-                return new Command(() => { App.Current.MainPage.Navigation.PushAsync(new Page1(email)); });
+                return new Command(() => { App.Current.MainPage.Navigation.PushAsync(new Page1()); });
             }
         }
 
@@ -67,7 +67,7 @@ namespace trofimon.ViewModel
                     {
                         await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
                         //Navigate to Welcome page after successfuly login pass user email to welcom page
-                        await App.Current.MainPage.Navigation.PushAsync(new Page1(Email));
+                        await App.Current.MainPage.Navigation.PushAsync(new Page1());
                     }
                     else
                         await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");

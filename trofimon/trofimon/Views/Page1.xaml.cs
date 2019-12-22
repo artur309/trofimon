@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using trofimon.ViewModel;
 
 namespace trofimon.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
-        Page1 page1;
-        public Page1(string email)
+       // Page1 page1;string email
+        public Page1()
         {
             InitializeComponent();
-            page1 = new Page1(email);
-            BindingContext = page1;
+           //page1 = new Page1(email);
+            //BindingContext = page1;
         }
     }
 }
