@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.ArturQuaresma.trofimon" android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="trofimon.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="trofimon" android:theme="@style/MainTheme" android:name="crc64b9a6b29f51e288b3.MainActivity">
+    <activity android:configChanges="screenSize" android:icon="@mipmap/icon" android:label="trofimon" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="crc64b9a6b29f51e288b3.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

@@ -48,7 +48,7 @@
     <EmbeddedResource Update="Views\Form\SignUp.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Page1.xaml">
+    <EmbeddedResource Update="Views\Nav\Page1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

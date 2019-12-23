@@ -31,8 +31,23 @@
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\firebasedatabase.net\4.0.4\lib\netstandard2.0\Firebase.dll">
       <PackagePath>Firebase.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\firesharp\2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll">
+      <PackagePath>FireSharp.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\litedb\4.1.4\lib\netstandard2.0\LiteDB.dll">
       <PackagePath>LiteDB.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.bcl.async\1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.bcl.async\1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.net.http\2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.net.http\2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -124,8 +139,77 @@
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\syncfusion.xamarin.sfcombobox\17.4.0.39\lib\uap10.0\Syncfusion.SfComboBox.XForms.UWP\dropdownbuttonimage.png">
       <PackagePath>Syncfusion.SfComboBox.XForms.UWP\dropdownbuttonimage.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -240,6 +324,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\add.png">
       <PackagePath>add.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\UIFontIcons.ttf">
       <PackagePath>Assets\UIFontIcons.ttf</PackagePath>

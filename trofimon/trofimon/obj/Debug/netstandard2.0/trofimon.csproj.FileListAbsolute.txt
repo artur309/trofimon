@@ -16,4 +16,5 @@ C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\n
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Themes\white.xaml.g.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Themes\WhiteTheme.xaml.g.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Form\Intro.xaml.g.cs
-C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Page1.xaml.g.cs
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Nav\Page1.xaml.g.cs
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\XamlC.stamp

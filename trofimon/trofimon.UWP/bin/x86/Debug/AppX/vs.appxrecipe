@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>7C0CB9D277A13D70AC0818D5AA76705B48AA72D966A15E4C2333695F5F6306B6</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>159B4147BABB5585730780E1565E1655664999ED16104A82C08FDA420863A7FB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>6e3e4cb9-c511-46c4-b455-cbbecd9af2af_1.0.0.0_x86__05yhcs1wq413m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>6e3e4cb9-c511-46c4-b455-cbbecd9af2af_05yhcs1wq413m!App</RegisteredUserModeAppID>
     <RegisteredPackageID>6e3e4cb9-c511-46c4-b455-cbbecd9af2af</RegisteredPackageID>
@@ -30,21 +30,41 @@
     <AppXManifest Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-22T14:21:46.565</Modified>
+      <Modified>2019-12-23T19:21:10.633</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\trofimon.UWP.exe">
       <PackagePath>entrypoint\trofimon.UWP.exe</PackagePath>
-      <Modified>2019-12-22T14:21:44.586</Modified>
+      <Modified>2019-12-23T19:13:22.133</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\firebasedatabase.net\4.0.4\lib\netstandard2.0\Firebase.dll">
       <PackagePath>Firebase.dll</PackagePath>
       <Modified>2019-11-09T16:18:38.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\firesharp\2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll">
+      <PackagePath>FireSharp.dll</PackagePath>
+      <Modified>2016-05-10T12:41:26.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\litedb\4.1.4\lib\netstandard2.0\LiteDB.dll">
       <PackagePath>LiteDB.dll</PackagePath>
       <Modified>2018-06-11T18:04:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.bcl.async\1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+      <Modified>2014-04-07T11:26:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.bcl.async\1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+      <Modified>2014-04-07T11:26:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.net.http\2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-07-21T12:52:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\microsoft.net.http\2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-07-21T12:52:18.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -120,7 +140,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\bin\Debug\netstandard2.0\trofimon.dll">
       <PackagePath>trofimon.dll</PackagePath>
-      <Modified>2019-12-22T14:31:05.813</Modified>
+      <Modified>2019-12-22T18:27:27.245</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Microsoft\Xamarin\NuGet\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -166,144 +186,230 @@
       <PackagePath>Syncfusion.SfComboBox.XForms.UWP\dropdownbuttonimage.png</PackagePath>
       <Modified>2019-12-12T16:01:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-12-03T11:50:33.272</Modified>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:24.779</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:24.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:22.377</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:22.522</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:17:57.570</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:17:57.730</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:23.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:23.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:27.703</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:27.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:25.873</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:26.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:26.884</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:27.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:29.897</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:30.088</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:23.904</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-12-23T19:12:24.102</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.465</Modified>
+      <Modified>2019-12-23T19:12:24.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.476</Modified>
+      <Modified>2019-12-23T19:12:25.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.490</Modified>
+      <Modified>2019-12-23T19:12:25.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.512</Modified>
+      <Modified>2019-12-23T19:12:22.160</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.672</Modified>
+      <Modified>2019-12-23T19:12:22.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.686</Modified>
+      <Modified>2019-12-23T19:12:22.807</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.699</Modified>
+      <Modified>2019-12-23T19:17:57.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.715</Modified>
+      <Modified>2019-12-23T19:17:57.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:31.988</Modified>
+      <Modified>2019-12-23T19:17:58.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.002</Modified>
+      <Modified>2019-12-23T19:12:22.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.019</Modified>
+      <Modified>2019-12-23T19:12:23.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.044</Modified>
+      <Modified>2019-12-23T19:12:23.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.286</Modified>
+      <Modified>2019-12-23T19:12:27.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.312</Modified>
+      <Modified>2019-12-23T19:12:28.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.321</Modified>
+      <Modified>2019-12-23T19:12:28.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.329</Modified>
+      <Modified>2019-12-23T19:12:25.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.529</Modified>
+      <Modified>2019-12-23T19:12:26.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.543</Modified>
+      <Modified>2019-12-23T19:12:26.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.554</Modified>
+      <Modified>2019-12-23T19:12:26.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.571</Modified>
+      <Modified>2019-12-23T19:12:27.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.796</Modified>
+      <Modified>2019-12-23T19:12:27.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.818</Modified>
+      <Modified>2019-12-23T19:12:29.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:32.827</Modified>
+      <Modified>2019-12-23T19:12:30.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:33.010</Modified>
+      <Modified>2019-12-23T19:12:30.395</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:33.021</Modified>
+      <Modified>2019-12-23T19:12:23.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:33.034</Modified>
+      <Modified>2019-12-23T19:12:24.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-03T11:50:33.049</Modified>
+      <Modified>2019-12-23T19:12:24.482</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
@@ -312,6 +418,10 @@
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\add.png">
       <PackagePath>add.png</PackagePath>
       <Modified>2019-12-03T11:50:34.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2019-12-03T11:50:33.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\Assets\UIFontIcons.ttf">
       <PackagePath>Assets\UIFontIcons.ttf</PackagePath>
@@ -339,15 +449,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf">
       <PackagePath>Microsoft.UI.Xaml\DensityStyles\Compact.xbf</PackagePath>
-      <Modified>2019-12-22T14:21:44.260</Modified>
+      <Modified>2019-12-22T17:33:50.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-22T14:21:44.261</Modified>
+      <Modified>2019-12-22T17:33:50.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-22T14:21:44.261</Modified>
+      <Modified>2019-12-22T17:33:50.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -363,11 +473,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-18T20:49:43.201</Modified>
+      <Modified>2019-12-23T19:14:26.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\Core\trofimon.UWP.exe">
       <PackagePath>trofimon.UWP.exe</PackagePath>
-      <Modified>2019-12-22T14:21:46.559</Modified>
+      <Modified>2019-12-23T19:21:10.624</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
