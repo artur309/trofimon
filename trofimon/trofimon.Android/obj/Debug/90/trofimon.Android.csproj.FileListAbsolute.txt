@@ -578,3 +578,4 @@ C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.Android\obj
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.Android\obj\Debug\90\android\assets\System.Net.Primitives.dll
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.dll
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp

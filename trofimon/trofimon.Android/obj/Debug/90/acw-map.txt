@@ -1,6 +1,3 @@
-trofimon.Droid.MainActivity, trofimon.Android;crc64b9a6b29f51e288b3.MainActivity
-trofimon.Droid.MainActivity;crc64b9a6b29f51e288b3.MainActivity
-trofimon.droid.MainActivity;crc64b9a6b29f51e288b3.MainActivity
 Syncfusion.XForms.Buttons.SfCheckBoxRenderer, Syncfusion.Buttons.XForms.Android;crc6494963511c3079d02.SfCheckBoxRenderer
 Syncfusion.XForms.Buttons.SfCheckBoxRenderer;crc6494963511c3079d02.SfCheckBoxRenderer
 syncfusion.xforms.buttons.SfCheckBoxRenderer;crc6494963511c3079d02.SfCheckBoxRenderer

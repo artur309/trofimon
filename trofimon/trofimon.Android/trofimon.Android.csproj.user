@@ -4,5 +4,6 @@
     <SelectedDevice>pixel_3a_xl_nougat_7_1_-_api_25</SelectedDevice>
     <DefaultDevice>pixel_3a_xl_nougat_7_1_-_api_25</DefaultDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

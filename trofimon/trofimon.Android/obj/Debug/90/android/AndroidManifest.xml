@@ -5,13 +5,9 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="trofimon.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
-    <activity android:configChanges="screenSize" android:icon="@mipmap/icon" android:label="trofimon" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="crc64b9a6b29f51e288b3.MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <application android:label="Trofimon" android:icon="@mipmap/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <service android:name="crc64a98abb514ffad9f1.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" />
