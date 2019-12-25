@@ -1,4 +1,6 @@
 # Trofimon
+![Alt text](site/logo.png?raw=true "Title")
+
 Projeto da PAP
 Aplicação cross-platform de receitas tudo numa Rede Social
 
