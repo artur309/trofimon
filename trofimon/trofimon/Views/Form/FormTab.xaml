@@ -8,26 +8,18 @@
             xmlns:form="clr-namespace:trofimon.Views.Form"
             x:Class="trofimon.Views.FormTab"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-    android:TabbedPage.ToolbarPlacement="Bottom">
+    android:TabbedPage.ToolbarPlacement="Bottom"
+             NavigationPage.HasBackButton="False"
+            NavigationPage.HasNavigationBar="false">
 
     <TabbedPage.Children>
         <NavigationPage Title="Login">
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_feed.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
             <x:Arguments>
                 <form:Login />
             </x:Arguments>
         </NavigationPage>
-        
+
         <NavigationPage Title="Registar">
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_about.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
             <x:Arguments>
                 <form:SignUp />
             </x:Arguments>

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using trofimon.ViewModels;
 
-namespace trofimon.Views.Form
+namespace trofimon.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SignUp : ContentPage
-    { 
-        public SignUp()
+    public partial class TabbedPage1 : TabbedPage
+    {
+        public TabbedPage1()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using trofimon.ViewModel;
+using trofimon.ViewModels;
 
 namespace trofimon.Views.Form
 {
@@ -16,9 +16,9 @@ namespace trofimon.Views.Form
         LoginViewModel loginViewModel;
         public Login()
         {
-            loginViewModel = new LoginViewModel(); 
-			InitializeComponent ();
+            loginViewModel = new LoginViewModel();
+            InitializeComponent();
             BindingContext = loginViewModel;
-		}
+        } 
     }
 }

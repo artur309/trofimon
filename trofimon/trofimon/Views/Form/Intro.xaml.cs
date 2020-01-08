@@ -16,5 +16,11 @@ namespace trofimon.Views.Form
         {
             InitializeComponent();
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            //https://forums.xamarin.com/discussion/101146/button-that-navigates-to-another-page-can-be-clicked-more-than-once
+            await Navigation.PushAsync(new FormTab()); 
+        }
     }
 }
