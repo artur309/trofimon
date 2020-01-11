@@ -1,4 +1,9 @@
+FFImageLoading.Forms.Platform
+FFImageLoading.Platform
+FFImageLoading.Svg.Forms
+FFImageLoading.Svg.Platform
 FormsViewGroup
+SkiaSharp
 Syncfusion.Buttons.XForms.Android
 Syncfusion.Core.XForms.Android
 Syncfusion.SfComboBox.XForms.Android

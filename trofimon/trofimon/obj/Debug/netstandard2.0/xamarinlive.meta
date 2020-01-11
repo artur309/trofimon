@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\App.xaml</FilePath>
+      <Hash>D1-45-C3-62-D2-F8-FD-AF-9D-61-37-47-6C-21-84-1D</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Themes\DarkTheme.xaml</FilePath>
+      <Hash>19-14-2E-00-58-81-84-CD-90-6E-70-5D-22-40-90-D3</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Themes\white.xaml</FilePath>
+      <Hash>EF-81-53-59-D2-A2-13-85-45-20-25-58-EC-93-2E-21</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Themes\WhiteTheme.xaml</FilePath>
+      <Hash>18-E4-FB-AA-7C-66-E2-D3-7B-4F-5F-91-5F-D8-AD-97</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Views\Form\FormTab.xaml</FilePath>
+      <Hash>1B-65-0E-F7-14-01-87-96-F4-60-03-80-00-33-34-2D</Hash>
+      <Properties>
+        <string>NavigationPage.HasBackButton</string>
+      </Properties>
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Views\Form\Intro.xaml</FilePath>
+      <Hash>B5-F3-60-5A-3E-11-BE-F9-75-82-BE-F8-08-E4-49-79</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Views\Form\Login.xaml</FilePath>
+      <Hash>44-0B-77-B9-52-4C-62-40-35-27-C0-40-BD-E3-FB-02</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Views\Form\SignUp.xaml</FilePath>
+      <Hash>EF-AC-D5-17-CD-01-52-C3-6E-60-B6-7F-D1-22-C4-52</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Views\Main\MainTab.xaml</FilePath>
+      <Hash>57-D5-31-4C-BF-91-5B-9B-DC-46-7A-4B-66-AA-D6-98</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\Views\TabView.xaml</FilePath>
+      <Hash>32-1F-A9-87-48-28-19-33-C9-FE-BA-8F-6B-58-30-94</Hash>
+      <Properties />
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

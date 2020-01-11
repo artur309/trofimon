@@ -2,7 +2,6 @@ C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\bin\Debug\n
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\bin\Debug\netstandard2.0\trofimon.dll
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\bin\Debug\netstandard2.0\ref\trofimon.dll
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\bin\Debug\netstandard2.0\trofimon.pdb
-C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\trofimon.AssemblyInfoInputs.cache
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\trofimon.AssemblyInfo.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\trofimon.dll
@@ -15,5 +14,7 @@ C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\n
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Themes\white.xaml.g.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Themes\WhiteTheme.xaml.g.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Form\Intro.xaml.g.cs
-C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Nav\Page1.xaml.g.cs
-C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\trofimon.csprojAssemblyReference.cache
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Main\MainTab.xaml.g.cs
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Main\TabbedPage1.xaml.g.cs

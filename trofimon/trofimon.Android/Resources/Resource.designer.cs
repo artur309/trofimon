@@ -8606,97 +8606,118 @@ namespace trofimon.Droid
 			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int design_bottom_navigation_item_background = 2131165316;
+			public const int cookbook = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int design_fab_background = 2131165317;
+			public const int criar = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int design_ic_visibility = 2131165318;
+			public const int design_bottom_navigation_item_background = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int design_ic_visibility_off = 2131165319;
+			public const int design_fab_background = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int design_password_eye = 2131165320;
+			public const int design_ic_visibility = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int design_snackbar_background = 2131165321;
+			public const int design_ic_visibility_off = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int dropdownbuttonimage = 2131165322;
+			public const int design_password_eye = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int ic_mtrl_chip_checked_black = 2131165323;
+			public const int design_snackbar_background = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int ic_mtrl_chip_checked_circle = 2131165324;
+			public const int dropdownbuttonimage = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int ic_mtrl_chip_close_circle = 2131165325;
-			
-			// aapt resource value: 0x7F07008F
-			public const int inputlayout_togglecollapseicon = 2131165327;
-			
-			// aapt resource value: 0x7F070090
-			public const int inputlayout_togglevisibleicon = 2131165328;
+			public const int fridge = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int input_layout_drop_down_icon = 2131165326;
+			public const int home = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int ic_mtrl_chip_checked_black = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int ic_mtrl_chip_checked_circle = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int mtrl_snackbar_background = 2131165329;
-			
-			// aapt resource value: 0x7F070092
-			public const int mtrl_tabs_default_indicator = 2131165330;
+			public const int ic_mtrl_chip_close_circle = 2131165329;
 			
 			// aapt resource value: 0x7F070093
-			public const int navigation_empty_icon = 2131165331;
+			public const int inputlayout_togglecollapseicon = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_action_background = 2131165332;
+			public const int inputlayout_togglevisibleicon = 2131165332;
+			
+			// aapt resource value: 0x7F070092
+			public const int input_layout_drop_down_icon = 2131165330;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_bg = 2131165333;
+			public const int intro1 = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_bg_low = 2131165334;
+			public const int intro2 = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_bg_low_normal = 2131165335;
+			public const int mtrl_snackbar_background = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_bg_low_pressed = 2131165336;
+			public const int mtrl_tabs_default_indicator = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_bg_normal = 2131165337;
+			public const int navigation_empty_icon = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_bg_normal_pressed = 2131165338;
+			public const int notification_action_background = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notification_icon_background = 2131165339;
+			public const int notification_bg = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int notification_template_icon_bg = 2131165340;
+			public const int notification_bg_low = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int notification_template_icon_low_bg = 2131165341;
+			public const int notification_bg_low_normal = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int notification_tile_bg = 2131165342;
+			public const int notification_bg_low_pressed = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int notify_panel_notification_icon_bg = 2131165343;
+			public const int notification_bg_normal = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_dark = 2131165344;
+			public const int notification_bg_normal_pressed = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_light = 2131165345;
+			public const int notification_icon_background = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int xamarin_logo = 2131165346;
+			public const int notification_template_icon_bg = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int notification_template_icon_low_bg = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int notification_tile_bg = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int notify_panel_notification_icon_bg = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int profile = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int tooltip_frame_dark = 2131165351;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int tooltip_frame_light = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int xamarin_logo = 2131165353;
 			
 			static Drawable()
 			{
@@ -9854,61 +9875,37 @@ namespace trofimon.Droid
 			public const int common_google_play_services_unknown_issue = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int default_web_client_id = 2131558444;
+			public const int fab_transformation_scrim_behavior = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int fab_transformation_scrim_behavior = 2131558445;
+			public const int fab_transformation_sheet_behavior = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int fab_transformation_sheet_behavior = 2131558446;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int firebase_database_url = 2131558447;
+			public const int mtrl_chip_close_icon_content_description = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int gcm_defaultSenderId = 2131558448;
+			public const int password_toggle_content_description = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int google_api_key = 2131558449;
+			public const int path_password_eye = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int google_app_id = 2131558450;
+			public const int path_password_eye_mask_strike_through = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int google_crash_reporting_api_key = 2131558451;
+			public const int path_password_eye_mask_visible = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int google_storage_bucket = 2131558452;
+			public const int path_password_strike_through = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int hide_bottom_view_on_scroll_behavior = 2131558453;
+			public const int search_menu_title = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
-			public const int mtrl_chip_close_icon_content_description = 2131558454;
-			
-			// aapt resource value: 0x7F0D0037
-			public const int password_toggle_content_description = 2131558455;
-			
-			// aapt resource value: 0x7F0D0038
-			public const int path_password_eye = 2131558456;
-			
-			// aapt resource value: 0x7F0D0039
-			public const int path_password_eye_mask_strike_through = 2131558457;
-			
-			// aapt resource value: 0x7F0D003A
-			public const int path_password_eye_mask_visible = 2131558458;
-			
-			// aapt resource value: 0x7F0D003B
-			public const int path_password_strike_through = 2131558459;
-			
-			// aapt resource value: 0x7F0D003C
-			public const int project_id = 2131558460;
-			
-			// aapt resource value: 0x7F0D003D
-			public const int search_menu_title = 2131558461;
-			
-			// aapt resource value: 0x7F0D003E
-			public const int status_bar_notification_info_overflow = 2131558462;
+			public const int status_bar_notification_info_overflow = 2131558454;
 			
 			static String()
 			{

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trofimon.UWP", "trofimon\tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trofimon.Android", "trofimon\trofimon.Android\trofimon.Android.csproj", "{E2591489-9A0E-4D52-8064-930E9F444EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trofimon", "trofimon\trofimon\trofimon.csproj", "{BB84A590-DF90-4002-89AE-525D76D8860C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "trofimon", "trofimon\trofimon\trofimon.csproj", "{BB84A590-DF90-4002-89AE-525D76D8860C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

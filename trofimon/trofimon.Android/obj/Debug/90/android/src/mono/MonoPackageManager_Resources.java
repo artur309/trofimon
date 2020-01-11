@@ -2,6 +2,13 @@ package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "trofimon.Android.dll" comes first in this list. */
+		"FFImageLoading.dll",
+		"FFImageLoading.Forms.dll",
+		"FFImageLoading.Forms.Platform.dll",
+		"FFImageLoading.Platform.dll",
+		"FFImageLoading.Svg.Forms.dll",
+		"FFImageLoading.Svg.Platform.dll",
+		"Firebase.Auth.dll",
 		"Firebase.dll",
 		"FireSharp.dll",
 		"FormsViewGroup.dll",
@@ -9,6 +16,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Threading.Tasks.dll",
 		"Microsoft.Threading.Tasks.Extensions.dll",
 		"Newtonsoft.Json.dll",
+		"SkiaSharp.dll",
 		"Syncfusion.Buttons.XForms.Android.dll",
 		"Syncfusion.Buttons.XForms.dll",
 		"Syncfusion.Core.XForms.Android.dll",
