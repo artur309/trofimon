@@ -2,6 +2,7 @@ package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "trofimon.Android.dll" comes first in this list. */
+		"trofimon.Android.dll",
 		"FFImageLoading.dll",
 		"FFImageLoading.Forms.dll",
 		"FFImageLoading.Forms.Platform.dll",

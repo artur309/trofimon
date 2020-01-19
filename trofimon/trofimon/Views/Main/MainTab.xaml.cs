@@ -13,8 +13,24 @@ namespace trofimon.Views.Main
     public partial class MainTab : TabbedPage
     {
         public MainTab()
-        {
+        {/*
+          var navigationPage = new NavigationPage(new Feed());
+            navigationPage.IconImageSource = "chef.png";
+            navigationPage.Title = "Schedule";
+
+            Children.Add(new Feed());
+            Children.Add(navigationPage);
+            Children.Add(new Feed());*/
+
+            //CurrentPageChanged += CurrentPageHasChanged;
             InitializeComponent();
+         } 
+
+        private void CurrentPageHasChanged(object sender, EventArgs e)
+        {
+            var tabbedPage = (TabbedPage)sender;
+            Title = tabbedPage.CurrentPage.Title;
         }
+
     }
 }

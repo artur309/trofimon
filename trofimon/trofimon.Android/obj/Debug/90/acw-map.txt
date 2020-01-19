@@ -1,3 +1,6 @@
+trofimon.Droid.MainActivity, trofimon.Android;crc64b9a6b29f51e288b3.MainActivity
+trofimon.Droid.MainActivity;crc64b9a6b29f51e288b3.MainActivity
+trofimon.droid.MainActivity;crc64b9a6b29f51e288b3.MainActivity
 FFImageLoading.Forms.Platform.CachedImageRenderer, FFImageLoading.Forms.Platform;crc6414fa209700c2b9f3.CachedImageRenderer
 FFImageLoading.Forms.Platform.CachedImageRenderer;crc6414fa209700c2b9f3.CachedImageRenderer
 ffimageloading.forms.platform.CachedImageRenderer;crc6414fa209700c2b9f3.CachedImageRenderer

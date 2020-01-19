@@ -6,27 +6,39 @@
              mc:Ignorable="d"
              x:Class="trofimon.Views.Main.MainTab"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:local="clr-namespace:trofimon.Views.Form"
             android:TabbedPage.ToolbarPlacement="Bottom"
              NavigationPage.HasBackButton="False"
             NavigationPage.HasNavigationBar="false">
 
+    <NavigationPage Title="Home" IconImageSource='chef.png'>
+        <x:Arguments>
+            <local:Login/>
+        </x:Arguments>
+    </NavigationPage>
     
+    <NavigationPage Title="Cookbook" IconImageSource="cookbook.png">
+        <x:Arguments>
+            <local:Login/>
+        </x:Arguments>
+    </NavigationPage>
 
-    <TabbedPage.Children>
+    <NavigationPage Title="Criar" IconImageSource="criar.png">
+        <x:Arguments>
+            <local:Login/>
+        </x:Arguments>
+    </NavigationPage>
 
+    <NavigationPage Title="Inv" IconImageSource="fridge.png">
+        <x:Arguments>
+            <local:Login/>
+        </x:Arguments>
+    </NavigationPage>
 
-        <NavigationPage  Title="Home">
-
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="chef.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
-        </NavigationPage>
-
-        <NavigationPage Title="Registar">
-        </NavigationPage>
-
-    </TabbedPage.Children>
+    <NavigationPage Title="Account" IconImageSource="profile.png">
+        <x:Arguments>
+            <local:Login/>
+        </x:Arguments>
+    </NavigationPage>
 
 </TabbedPage>

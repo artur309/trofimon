@@ -17,4 +17,5 @@ C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\n
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\trofimon.csprojAssemblyReference.cache
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Main\MainTab.xaml.g.cs
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Main\TabbedPage1.xaml.g.cs
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon\obj\Debug\netstandard2.0\Views\Main\Login.xaml.g.cs

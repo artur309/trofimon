@@ -116,3 +116,6 @@ C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\FFImageLoading.Svg.Platform.pdb
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\FFImageLoading.Svg.Forms.dll
 C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\FFImageLoading.Svg.Forms.pdb
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\Firebase.Auth.dll
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\FireSharp.Serialization.JsonNet.dll
+C:\Users\artur\Desktop\ConteudoDaPap\_PAP\trofimon\trofimon\trofimon.UWP\bin\x86\Debug\RestSharp.dll

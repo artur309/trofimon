@@ -4,7 +4,7 @@
 		<Qualifiers/>
 		<ResourceMapSubtree name="Files">
 			<ResourceMapSubtree name="Xamarin.Forms.Platform.UAP">
-				<NamedResource name="AutoSuggestStyle.xbf" uri="ms-resource://Xamarin.Forms.Platform.UAP/Files/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf">
+				<NamedResource name="FormsAutoSuggestBoxStyle.xbf" uri="ms-resource://Xamarin.Forms.Platform.UAP/Files/Xamarin.Forms.Platform.UAP/FormsAutoSuggestBoxStyle.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>

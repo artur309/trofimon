@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[2.0.4, )"
             },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
             "FirebaseDatabase.net": {
               "target": "Package",
               "version": "[4.0.4, )"
@@ -96,7 +100,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[4.4.0.991477, )"
             },
             "Xamarin.GooglePlayServices.Basement": {
               "target": "Package",
@@ -147,10 +151,6 @@
             "FireSharp": {
               "target": "Package",
               "version": "[2.0.4, )"
-            },
-            "FireSharp.Serialization.JsonNet": {
-              "target": "Package",
-              "version": "[1.1.0, )"
             },
             "FirebaseAuthentication.net": {
               "target": "Package",
@@ -214,7 +214,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[4.4.0.991477, )"
             }
           },
           "imports": [
@@ -227,7 +227,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

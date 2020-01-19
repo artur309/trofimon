@@ -389,11 +389,11 @@
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ContentTemplate" />
       <RootProperty Name="ContentTransitions" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="UseSystemFocusVisuals" />
       <RootProperty Name="Clip" />

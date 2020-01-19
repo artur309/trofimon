@@ -10,4 +10,7 @@
     <LargeTileSource>C:\Users\artur\Desktop\4x\Prancheta 1%404x.png</LargeTileSource>
     <PackageLogoSource>C:\Users\artur\Desktop\4x\Prancheta 1%404x.png</PackageLogoSource>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <UseSimulator>false</UseSimulator>
+  </PropertyGroup>
 </Project>

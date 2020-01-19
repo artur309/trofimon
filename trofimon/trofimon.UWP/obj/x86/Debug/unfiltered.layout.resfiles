@@ -1,5 +1,4 @@
 WinMetadata\Windows.winmd
-add.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png
 Assets\LargeTile.scale-150.png
@@ -54,7 +53,4 @@ App.xbf
 MainPage.xbf
 Microsoft.UI.Xaml\DensityStyles\Compact.xbf
 trofimon.UWP.xr.xml
-intro1.png
-intro2.png
 Properties\Default.rd.xml
-xamarin_logo.png
