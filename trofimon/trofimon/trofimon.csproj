@@ -5,12 +5,27 @@
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <ApplicationIcon>TrofimonLogo.ico</ApplicationIcon>
     <Win32Resource />
+    <DisableEmbeddedXbf>false</DisableEmbeddedXbf>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Assets\**" />
     <EmbeddedResource Remove="Assets\**" />
     <None Remove="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Themes\DarkTheme.xaml.cs" />
+    <Compile Remove="Themes\LightTheme.xaml.cs" />
+    <Compile Remove="Themes\white.xaml.cs" />
+    <Compile Remove="Themes\WhiteTheme.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Themes\DarkTheme.xaml" />
+    <EmbeddedResource Remove="Themes\LightTheme.xaml" />
+    <EmbeddedResource Remove="Themes\white.xaml" />
+    <EmbeddedResource Remove="Themes\WhiteTheme.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,25 +37,18 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.4.0.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.4.0.41" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.4.0.41" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.4.0.46" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991477" />  
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Themes\WhiteTheme.xaml.cs">
-      <DependentUpon>WhiteTheme.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Themes\white.xaml.cs">
-      <DependentUpon>white.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Form\FormTab.xaml.cs">
       <DependentUpon>FormTab.xaml</DependentUpon>
     </Compile>
@@ -50,12 +58,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Themes\DarkTheme.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Themes\white.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Form\Intro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -65,11 +67,15 @@
     <EmbeddedResource Update="Views\Form\SignUp.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Main\Login.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Main\MainTab.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Main\Profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\" />
   </ItemGroup>
 </Project>

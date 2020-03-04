@@ -6,31 +6,28 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using trofimon.ViewModel;
 
 namespace trofimon.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainTab : TabbedPage
     {
-        public MainTab()
-        {/*
-          var navigationPage = new NavigationPage(new Feed());
-            navigationPage.IconImageSource = "chef.png";
-            navigationPage.Title = "Schedule";
 
-            Children.Add(new Feed());
-            Children.Add(navigationPage);
-            Children.Add(new Feed());*/
+        // MainTab mainTab;string email
 
-            //CurrentPageChanged += CurrentPageHasChanged;
-            InitializeComponent();
-         } 
-
-        private void CurrentPageHasChanged(object sender, EventArgs e)
+        WelcomePageVM welcomePageVM;
+        public MainTab(string email)
         {
-            var tabbedPage = (TabbedPage)sender;
-            Title = tabbedPage.CurrentPage.Title;
+            InitializeComponent();
+            welcomePageVM = new WelcomePageVM(email);
+            BindingContext = welcomePageVM;
         }
-
     }
+
+    /*private void CurrentPageHasChanged(object sender, EventArgs e)
+    {
+        var tabbedPage = (TabbedPage)sender;
+        Title = tabbedPage.CurrentPage.Title;
+    }*/
 }

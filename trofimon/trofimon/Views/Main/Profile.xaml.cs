@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace trofimon.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Login : ContentPage
+    public partial class Profile : ContentPage
     {
-        public Login()
+        public Profile()
         {
             InitializeComponent();
         }

@@ -4,7 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="trofimon.Views.Main.Login">
+             x:Class="trofimon.Views.Main.Profile"
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.BackButtonTitle="false">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"

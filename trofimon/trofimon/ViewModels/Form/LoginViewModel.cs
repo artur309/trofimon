@@ -1,24 +1,29 @@
-﻿using System;
+﻿using EncryptStringSample;
+using Plugin.Settings;
+using Plugin.Settings.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
-using Xamarin.Forms;
 using trofimon.Views;
+using trofimon.Views.Form;
+using trofimon.Views.Main;
+using Xamarin.Forms;
 
-namespace trofimon.ViewModels
+
+//private static ISettings AppSettings => CrossSettings.Current;
+
+namespace trofimon.ViewModel
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public LoginViewModel()
-        {
 
-        }
         private string email;
         public string Email
         {
-            get { return email; }
+            get => email;
             set
             {
                 email = value;
@@ -28,62 +33,46 @@ namespace trofimon.ViewModels
         private string password;
         public string Password
         {
-            get { return password; }
+            get => password;
             set
             {
                 password = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
-        public Command LoginCommand
-        {
-            get
-            {
-                return new Command(Login);
-            }
-        }
-        public Command SignUp
-        {
-            get
-            {
-                return new Command(()=> { App.Current.MainPage.Navigation.PushAsync(new Views.Main.MainTab()); });
-            }
-        }
+
+        public Command LoginCommand => new Command(Login);
 
         private async void Login()
         {
-           // App.Current.MainPage.Navigation.PushAsync(new Views.Main.MainTab());
-
-
-            await App.Current.MainPage.Navigation.PushAsync(new Views.Main.MainTab());
-
-            //Application.Current.MainPage = new Views.Main.MainTab();
-
-
-            /*
-            //null or empty field validation, check weather email and password is null or empty
-
+            //validação, email ou password não é preenchida
             if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
-             await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
+            {
+                await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
+            }
             else
             {
-                //call GetUser function which we define in Firebase helper class
                 var user = await FirebaseHelper.GetUser(Email);
-                //firebase return null valuse if user data not found in database
-                if(user!=null)
-                if (Email == user.Email && Password == user.Password)
+                //firebase retorna valor nulo se os dados do utilizador não serem encontrados
+                if (user != null)
                 {
-                await  App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
-                    //Navigate to Wellcom page after successfuly login
-                    //pass user email to welcom page
-                 await App.Current.MainPage.Navigation.PushAsync(new WelcomPage(Email));
+                    string PasswordDecrypt = StringCipher.Decrypt("batlz", user.Password); //desencripta password
+                    if (Email == user.Email && PasswordDecrypt == user.Password)
+                    {
+                        //da-se o login e é enviado a informacao do utilizador pra mainPage
+                        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                        await App.Current.MainPage.Navigation.PushAsync(new MainTab(Email));
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
+                    }
                 }
                 else
-                await  App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
-                else
+                {
                     await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
-
-    */
+                }
+            }
         }
     }
 }

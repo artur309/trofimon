@@ -9,14 +9,15 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <themes:DarkTheme/>
+            <ResourceDictionary.MergedDictionaries> 
             </ResourceDictionary.MergedDictionaries >
+
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#79b4a9</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="Black"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

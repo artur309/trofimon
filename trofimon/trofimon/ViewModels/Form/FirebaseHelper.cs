@@ -8,21 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using trofimon.Models;
 
-namespace trofimon.ViewModels
+namespace trofimon.ViewModel
 {
-    public class FirebaseHelper
+    public static class FirebaseHelper
     {
-        //Conexão a Base Dados firebase 
         public static FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
 
-        //Read All
+        //Lista de utilizadores
         public static async Task<List<Users>> GetAllUser()
         {
             try
             {
                 var userlist = (await firebase
-                .Child("Users")
-                .OnceAsync<Users>()).Select(item =>
+                    .Child("Users")
+                    .OnceAsync<Users>()).Select(item =>
                 new Users
                 {
                     Email = item.Object.Email,
@@ -44,8 +43,8 @@ namespace trofimon.ViewModels
             {
                 var allUsers = await GetAllUser();
                 await firebase
-                .Child("Users")
-                .OnceAsync<Users>();
+                    .Child("Users")
+                    .OnceAsync<Users>();
                 return allUsers.Where(a => a.Email == email).FirstOrDefault();
             }
             catch (Exception e)
@@ -55,7 +54,7 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Inser a user
+        //Adicionar utilizador
         public static async Task<bool> AddUser(string email, string password)
         {
             try
@@ -72,18 +71,18 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Update 
+        //Atualizar utilizador 
         public static async Task<bool> UpdateUser(string email, string password)
         {
             try
             {
                 var toUpdateUser = (await firebase
-                .Child("Users")
-                .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
+                    .Child("Users")
+                    .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
                 await firebase
-                .Child("Users")
-                .Child(toUpdateUser.Key)
-                .PutAsync(new Users() { Email = email, Password = password });
+                    .Child("Users")
+                    .Child(toUpdateUser.Key)
+                    .PutAsync(new Users() { Email = email, Password = password });
                 return true;
             }
             catch (Exception e)
@@ -93,14 +92,14 @@ namespace trofimon.ViewModels
             }
         }
 
-        //Delete User
+        //Apagar Utilizador
         public static async Task<bool> DeleteUser(string email)
         {
             try
             {
                 var toDeletePerson = (await firebase
-                .Child("Users")
-                .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
+                    .Child("Users")
+                    .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
                 await firebase.Child("Users").Child(toDeletePerson.Key).DeleteAsync();
                 return true;
             }
@@ -110,6 +109,5 @@ namespace trofimon.ViewModels
                 return false;
             }
         }
-
     }
 }

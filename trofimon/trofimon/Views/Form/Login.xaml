@@ -5,10 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="trofimon.Views.Form.Login"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.BackButtonTitle="false">
+    
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name = "Email" Placeholder = "Emaila" Text="{Binding Email}"
+            <Entry x:Name = "Email" Placeholder = "Email" Text="{Binding Email}"
                    HeightRequest = "40"
                    Keyboard = "Email"/>
             <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Password"
@@ -20,4 +23,5 @@
             <Button x:Name="signup" Text="SignUp" Command="{Binding SignUp}" HorizontalOptions="End"/>
         </StackLayout>
     </ContentPage.Content>
+        
 </ContentPage>

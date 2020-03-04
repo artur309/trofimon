@@ -11,10 +11,14 @@ namespace trofimon.Views.Form
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignUp : ContentPage
-    { 
+    {
+        SignUpViewModel SignUpViewModel;
         public SignUp()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            SignUpViewModel = new SignUpViewModel();
+            //set binding
+            BindingContext = SignUpViewModel;
         }
     }
 }

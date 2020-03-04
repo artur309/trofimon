@@ -8,18 +8,13 @@ namespace trofimon
 {
     public partial class App : Application
     {
-        //TODO: Replace with *.azurewebsites.net url after deploying backend to Azure
-        //To debug on Android emulators run the web backend against .NET Core not IIS
-        //If using other emulators besides stock Google images you may need to adjust the IP address
-        //public static bool UseMockDataStore = true;
-
         public App()
         {
             InitializeComponent();
             //MainPage = new MainPage();
             //MainPage = new NavigationPage(new Views.Main.MainTab());
             MainPage = new NavigationPage(new Views.Form.Intro());
-             
+            //MainPage = new NavigationPage(new FormTab());
         }
 
         protected override void OnStart()
