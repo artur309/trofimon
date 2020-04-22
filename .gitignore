@@ -1,2 +1,4 @@
 ﻿trofimon/trofimon.Android/obj
 .vs
+trofimon/trofimon.UWP/obj/x64/Debug
+trofimon/trofimon/obj/Debug
