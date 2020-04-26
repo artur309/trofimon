@@ -46,6 +46,7 @@ namespace trofimon.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs("ConfirmPassword"));
             }
         }
+
         public Command SignUpCommand => new Command(() =>
         {
             if (Password == ConfirmPassword)

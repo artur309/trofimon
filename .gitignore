@@ -2,3 +2,5 @@
 .vs
 trofimon/trofimon.UWP/obj/x64/Debug
 trofimon/trofimon/obj/Debug
+trofimon/trofimon.Android/bin/Debug
+trofimon/trofimon.UWP/obj

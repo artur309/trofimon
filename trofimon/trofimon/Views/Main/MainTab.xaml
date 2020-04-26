@@ -15,19 +15,19 @@
 
     <NavigationPage Title="Home" IconImageSource='chef.png'>
         <x:Arguments>
-            <Main:Profile/>
+            <Main:Home/>
         </x:Arguments>
     </NavigationPage>
     
     <NavigationPage Title="Cookbook" IconImageSource="cookbook.png">
         <x:Arguments>
-            <Main:Profile/>
+            <Main:Cookbook/>
         </x:Arguments>
     </NavigationPage>
 
     <NavigationPage Title="Criar" IconImageSource="criar.png">
         <x:Arguments>
-            <Main:Profile/>
+            <Main:ReceitaPage/>
         </x:Arguments>
     </NavigationPage>
 
