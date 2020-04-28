@@ -10,7 +10,7 @@ using trofimon.Views;
 using trofimon.Views.Form;
 using trofimon.Views.Main;
 using Xamarin.Forms;
-
+using Xamarin.Essentials;
 
 //private static ISettings AppSettings => CrossSettings.Current;
 
@@ -20,14 +20,33 @@ namespace trofimon.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public bool lembrarSessao
+        {
+            get => Preferences.Get("lembrarSessao", false);
+            set
+            {
+                Preferences.Set("lembrarSessao", value);
+
+                PropertyChanged(this, new PropertyChangedEventArgs("lembrarSessao"));
+
+                Application.Current.Properties["lembrarSessao"] = false;
+                Application.Current.SavePropertiesAsync();
+            }
+        }
+
         private string email;
         public string Email
         {
-            get => email;
+            get => Preferences.Get("Email",email);
             set
             {
-                email = value;
+                Preferences.Set("Email", value);
                 PropertyChanged(this, new PropertyChangedEventArgs("Email"));
+
+                Application.Current.Properties["Email"] = false;
+                Application.Current.SavePropertiesAsync();
+
+                Utils.Settings.LastUsedEmail = value;
             }
         }
         private string password;
@@ -45,6 +64,7 @@ namespace trofimon.ViewModel
 
         private async void Login()
         {
+            Email = Utils.Settings.LastUsedEmail;
             //validação, email ou password não é preenchida
             if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
             {
@@ -56,10 +76,11 @@ namespace trofimon.ViewModel
                 //firebase retorna valor nulo se os dados do utilizador não serem encontrados
                 if (user != null)
                 {
-                    string PasswordDecrypt = StringCipher.Decrypt("batlz", user.Password); //desencripta password
-                    if (Email == user.Email && PasswordDecrypt == user.Password)
+                    //string PasswordDecrypt = StringCipher.Decrypt("batlz", user.Password); //desencripta password
+                    if (Email == user.Email && Password == user.Password)
                     {
                         //da-se o login e é enviado a informacao do utilizador pra mainPage
+
                         await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
                         await App.Current.MainPage.Navigation.PushAsync(new MainTab(Email));
                     }

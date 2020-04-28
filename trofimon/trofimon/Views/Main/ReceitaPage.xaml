@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="trofimon.Views.Main.ReceitaPage"
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.BackButtonTitle="false">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label VerticalOptions="StartAndExpand" HorizontalOptions="Center" Text="Criar Receita" FontSize="20"/>
+
+            <Entry x:Name="NomeReceita" VerticalOptions="Center" Text="{Binding NomeReceita}" Placeholder="Nome Receita"/>
+            <Entry x:Name="Ingredientes" VerticalOptions="Center" Text="{Binding Ingredientes}" Placeholder="Ingredientes"/>
+            <Entry x:Name="Preparacao" VerticalOptions="Center" Text="{Binding Preparacao}" Placeholder="Preparação"/>
+
+            <Label Text="Imagens" FontSize="16"/>
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                    <Image x:Name="imgBanner" Source="banner.png" ></Image>
+                    <Image Margin="0,0,0,10" HeightRequest="100" Source="firebase.png" >
+                    </Image>
+                    <Label Margin="0,0,0,10" Text="Firebase Storage" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Image x:Name="imgChoosed" HeightRequest="100"></Image>
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnPick" WidthRequest="200" Text="Pick" Clicked="BtnPick_Clicked"/>
+                        <Button x:Name="btnUpload" WidthRequest="200" Text="Upload" Clicked="BtnUpload_Clicked" />
+                    </StackLayout>
+
+                    <Label x:Name="lblPath" Text="{Binding Imagem}"></Label>
+
+                </StackLayout>
+            </StackLayout>
+
+            <Button x:Name="guardarReceita" WidthRequest="100" Text="Guardar" Command="{Binding GuardarReceitaCommand}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+
+            <ProgressBar Progress=".69"></ProgressBar>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

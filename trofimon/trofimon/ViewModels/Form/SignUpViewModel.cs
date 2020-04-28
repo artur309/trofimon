@@ -12,6 +12,8 @@ namespace trofimon.ViewModels
 {
     public class SignUpViewModel : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private string email;
         public string Email
         {
@@ -22,10 +24,8 @@ namespace trofimon.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs("Email"));
             }
         }
+
         private string password;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public string Password
         {
             get => password;
@@ -68,19 +68,19 @@ namespace trofimon.ViewModels
             }
             else
             {
-                string PasswordCrypt = StringCipher.Encrypt("batlz", password); //encripta password
-                var user = await FirebaseHelper.AddUser(Email, PasswordCrypt);
-                //AddUser return true if data insert successfuly 
+                //string PasswordCrypt = StringCipher.Encrypt("batlz", Password); //encripta password
+                var user = await FirebaseHelper.AddUser(Email, Password);
+                //Adiciona User 
                 if (user)
                 {
-                    await App.Current.MainPage.DisplayAlert("SignUp Success", "", "Ok");
-                    //Navigate to Wellcom page after successfuly SignUp
-                    //pass user email to welcom page
-                    await App.Current.MainPage.Navigation.PushAsync(new Views.Main.MainTab(Email));
+                    await App.Current.MainPage.DisplayAlert("Conta Registada com Sucesso", "", "Ok");
+                    //login automatico
+                    await App.Current.MainPage.Navigation.PushModalAsync(new Views.Main.MainTab(Email));
+                    await App.Current.MainPage.Navigation.PopToRootAsync();
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", "SignUp Fail", "OK");
+                    await App.Current.MainPage.DisplayAlert("Error", "Conta Registada sem Sucesso", "OK");
                 }
             }
         }

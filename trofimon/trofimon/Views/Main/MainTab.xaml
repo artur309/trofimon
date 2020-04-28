@@ -33,7 +33,7 @@
 
     <NavigationPage Title="Inv" IconImageSource="fridge.png">
         <x:Arguments>
-            <Main:Profile/>
+            <Main:InvPage/>
         </x:Arguments>
     </NavigationPage>
 

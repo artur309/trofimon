@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,19 +7,28 @@
              NavigationPage.HasNavigationBar="false"
              NavigationPage.HasBackButton="False"
              NavigationPage.BackButtonTitle="false">
-    
-    <ContentPage.Content>
-        <StackLayout>
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/Form/form.css" />
+    </ContentPage.Resources>
+
+    <ContentPage.Content>        
+        <StackLayout StyleClass="Login" VerticalOptions="Center">
             <Entry x:Name = "Email" Placeholder = "Email" Text="{Binding Email}"
                    HeightRequest = "40"
-                   Keyboard = "Email"/>
+                   Keyboard = "Email" StyleClass="detailPageTitle" />
             <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Password"
                    HeightRequest = "40"
                    IsPassword = "True"/>
+
+            <Grid StyleClass="SessaoAuto">
+                <Label x:Name = "labelSessao" Text="Inicar Sessão Automática "/>
+                <Switch IsToggled="{Binding lembrarSessao}"/>
+            </Grid>
+            
             <Button x:Name= "loginbtn" Text = "Login " 
                     Command="{Binding LoginCommand}"
                     HorizontalOptions = "FillAndExpand"/>
-            <Button x:Name="signup" Text="SignUp" Command="{Binding SignUp}" HorizontalOptions="End"/>
         </StackLayout>
     </ContentPage.Content>
         
