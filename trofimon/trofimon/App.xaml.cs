@@ -14,11 +14,10 @@ namespace trofimon
         LoginViewModel loginViewModel = new LoginViewModel();
         public App()
         {
-
             InitializeComponent();
-            MainPage = new NavigationPage();
+            //MainPage = new NavigationPage();
             //MainPage = new NavigationPage(new Views.Main.MainTab("41"));
-            //MainPage = new NavigationPage(new Views.Form.Intro());
+            MainPage = new NavigationPage(new Views.Form.Intro());
             //MainPage = new NavigationPage(new FormTab());
         }
 
@@ -28,17 +27,15 @@ namespace trofimon
             if (loginViewModel.lembrarSessao == true)
             {
                 //verifficar se tem sessao variabel
-                if (Application.Current.Properties.ContainsKey("Email"))
-                {
-                    //Current.MainPage.DisplayAlert("Email: " + Preferences.Get(loginViewModel.Email, loginViewModel.Email), "", "Ok");
+                if (Current.Properties.ContainsKey("Email"))
                     //App.Current.MainPage.Navigation.PopAsync();
-                    App.Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(loginViewModel.Email, loginViewModel.Email)));
-                }
+                    Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(loginViewModel.Email, loginViewModel.Email)));
+                
                 Current.MainPage.DisplayAlert("Ligado", "", "Ok");
             }
             else
             {
-                MainPage = new NavigationPage(new FormTab());
+                //MainPage = new NavigationPage(new FormTab());
                 Current.MainPage.DisplayAlert("Desligado", "", "Ok");
             }
         }
