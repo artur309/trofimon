@@ -17,7 +17,7 @@ namespace trofimon
             InitializeComponent();
             //MainPage = new NavigationPage();
             //MainPage = new NavigationPage(new Views.Main.MainTab("41"));
-            MainPage = new NavigationPage(new Views.Form.Intro());
+            MainPage = new NavigationPage(new Intro());
             //MainPage = new NavigationPage(new FormTab());
         }
 

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -37,8 +40,30 @@ namespace trofimon.UWP
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
+
+        //Funcao para colocar tema no UWP
+        //https://stackoverflow.com/questions/59927920/how-to-set-dark-theme-on-xamarin-forms-uwp
+        public static class ThemeSelectorService
+        {
+            public static async Task SetRequestedThemeAsync(ElementTheme Theme)
+            {
+                foreach (var view in CoreApplication.Views)
+                {
+                    await view.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                    {
+                        if (Window.Current.Content is FrameworkElement frameworkElement)
+                        {
+                            frameworkElement.RequestedTheme = Theme;
+                        }
+                    });
+                }
+            }
+        }
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            ThemeSelectorService.SetRequestedThemeAsync(ElementTheme.Light); //utilizacao do chooser tema
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

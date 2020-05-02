@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 using trofimon.ViewModel;
 
 namespace trofimon.Views.Main
@@ -27,7 +29,11 @@ namespace trofimon.Views.Main
             SelectedItem = Color.FromHex("#24BE35");
 
             //disabilita o swipe
-            On<Xamarin.Forms.PlatformConfiguration.Android>().SetIsSwipePagingEnabled(false);
+            On<Android>().SetIsSwipePagingEnabled(false);
+
+            //adicionar os icones no UWP
+            On<Windows>().SetHeaderIconsSize(new Size(24, 24));
+            On<Windows>().SetHeaderIconsEnabled(true);
 
             welcomePageVM = new WelcomePageVM(email);
             BindingContext = welcomePageVM;
