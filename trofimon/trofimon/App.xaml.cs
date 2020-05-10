@@ -28,9 +28,11 @@ namespace trofimon
             {
                 //verifficar se tem sessao variabel
                 if (Current.Properties.ContainsKey("Email"))
+                {
                     //App.Current.MainPage.Navigation.PopAsync();
-                    Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(loginViewModel.Email, loginViewModel.Email)));
-                
+                    string userId = loginViewModel.Email;
+                    Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(userId, userId)));
+                }
                 Current.MainPage.DisplayAlert("Ligado", "", "Ok");
             }
             else
@@ -40,15 +42,15 @@ namespace trofimon
             }
         }
 
+        // Handle when your app sleeps
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
         }
 
+        // Handle when your app resumes
         protected override void OnResume()
         {
             Current.MainPage.DisplayAlert("PUNK where did u go????", "", "Ok");
-            // Handle when your app resumes
         }
     }
 }

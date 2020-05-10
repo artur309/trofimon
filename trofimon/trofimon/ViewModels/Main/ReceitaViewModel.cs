@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Threading;
+using System.IO;
+using System.Threading.Tasks;
+using System.Diagnostics;
 using trofimon.ViewModel;
 using Xamarin.Forms;
 using trofimon.Views;
-using trofimon.Utils;
-using EncryptStringSample;
+using trofimon.ViewModels.Main;
+using Xamarin.Essentials;
+using Firebase.Storage;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using Plugin.Permissions.Abstractions;
 
 namespace trofimon.ViewModels.Main
 {
@@ -49,18 +56,18 @@ namespace trofimon.ViewModels.Main
         }
 
         private string imagem;
-        public string Imagem
+        public string ImagemPath
         {
             get => imagem;
             set
             {
                 imagem = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("Imagem"));
+                PropertyChanged(this, new PropertyChangedEventArgs("ImagemPath"));
             }
         }
 
-        // private bool privacidade;
-        /*public bool Privacidade
+        private bool privacidade;
+        public bool Privacidade
         {
             get => privacidade;
             set
@@ -68,24 +75,32 @@ namespace trofimon.ViewModels.Main
                 privacidade = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Privacidade"));
             }
-        }*/
+        }
+
+        private ImageSource imgChoosed;
+        public ImageSource ImageSource
+        {
+            get => imgChoosed;
+            set
+            {
+                imgChoosed = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("imgChoosed"));
+            }
+        }
+        
+        //Guardar receita
         public Command GuardarReceitaCommand => new Command(GuardarReceita);
         private async void GuardarReceita()
         {
             //validação, email ou password não é preenchida
 
-            var receita = await FirebaseHelper.AddReceita(NomeReceita, Ingredientes, Preparacao, "s");
+            var receita = await FirebaseHelper.AddReceita(NomeReceita, Ingredientes, Preparacao, ImagemPath, Privacidade);
             //Adiciona User 
             if (receita)
-            {
+                //await firebaseStorageHelper.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
                 await App.Current.MainPage.DisplayAlert("Receita guardada com Sucesso", "", "Ok");
-            }
             else
-            {
                 await App.Current.MainPage.DisplayAlert("Error", "Erro ao guardar receita", "OK");
-            }
-
         }
-
     }
 }

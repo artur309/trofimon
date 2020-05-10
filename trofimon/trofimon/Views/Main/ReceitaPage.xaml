@@ -8,6 +8,7 @@
              NavigationPage.HasNavigationBar="false"
              NavigationPage.HasBackButton="False"
              NavigationPage.BackButtonTitle="false">
+
     <ContentPage.Content>
         <StackLayout>
 
@@ -17,28 +18,28 @@
             <Entry x:Name="Ingredientes" VerticalOptions="Center" Text="{Binding Ingredientes}" Placeholder="Ingredientes"/>
             <Entry x:Name="Preparacao" VerticalOptions="Center" Text="{Binding Preparacao}" Placeholder="Preparação"/>
 
-            <Label Text="Imagens" FontSize="16"/>
+            <Label Text="Imagem" FontSize="16"/>
             <StackLayout>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                    <Image x:Name="imgBanner" Source="banner.png" ></Image>
-                    <Image Margin="0,0,0,10" HeightRequest="100" Source="firebase.png" >
-                    </Image>
-                    <Label Margin="0,0,0,10" Text="Firebase Storage" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-                    <Image x:Name="imgChoosed" HeightRequest="100"></Image>
+
+                    <Label Margin="0,0,0,10" Text="Firebase Storage" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" />
+
+                    <Image  Source="{Binding imgChoosed}" x:Name="imgChoosed" HeightRequest="100"/>
+
                     <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                        <Button x:Name="btnPick" WidthRequest="200" Text="Pick" Clicked="BtnPick_Clicked"/>
-                        <Button x:Name="btnUpload" WidthRequest="200" Text="Upload" Clicked="BtnUpload_Clicked" />
+                        <Button x:Name="btnPick" WidthRequest="200" Text="Importar" Clicked="PickImg" HorizontalOptions="CenterAndExpand"/>
+                        <Button x:Name="btnCamera" WidthRequest="200" Text="Câmera" Clicked="CameraImg" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
 
-                    <Label x:Name="lblPath" Text="{Binding Imagem}"></Label>
+                    <Label x:Name="lblPath" Text="{Binding ImagemPath}"/>
 
                 </StackLayout>
             </StackLayout>
 
-            <Button x:Name="guardarReceita" WidthRequest="100" Text="Guardar" Command="{Binding GuardarReceitaCommand}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            <Button x:Name="guardarReceita" WidthRequest="100" Text="Guardar" Command="{Binding GuardarReceitaCommand}" Clicked="guardaIMG" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
 
-            <ProgressBar Progress=".69"></ProgressBar>
+            <ProgressBar Progress=".69"/>
         </StackLayout>
-
     </ContentPage.Content>
+
 </ContentPage>

@@ -1,13 +1,20 @@
-﻿using Firebase.Database;
-using Firebase.Database.Query;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using trofimon.Models;
+using Firebase.Database;
+using Firebase.Database.Query;
+using trofimon.Models; 
+using trofimon.ViewModel;
+using trofimon.Views;
+using trofimon.Views.Form;
+using trofimon.Views.Main;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace trofimon.ViewModel
 {
@@ -111,7 +118,6 @@ namespace trofimon.ViewModel
             }
         }
 
-
         //Lista de Receitas
         public static async Task<List<Receitas>> GetAllReceitas()
         {
@@ -126,7 +132,7 @@ namespace trofimon.ViewModel
                     Ingredientes = item.Object.Ingredientes,
                     Preparacao = item.Object.Preparacao,
                     Imagem = item.Object.Imagem,
-                    //Privacidade = item.Object.Privacidade
+                    Privacidade = item.Object.Privacidade
                 }).ToList();
                 return receitaLista;
             }
@@ -138,19 +144,21 @@ namespace trofimon.ViewModel
         }
 
         //Adicionar Receita
-        public static async Task<bool> AddReceita(string nomeReceita, string ingredientes, string preparacao, string imagem)
+        public static async Task<bool> AddReceita(string nomeReceita, string ingredientes, string preparacao, string imagem, bool privacidade)
         {
+            LoginViewModel loginViewModel = new LoginViewModel();
             try
             {
                 await firebase
                 .Child("Receitas")
+                .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 .PostAsync(new Receitas()
                 {
-                    NomeReceita = nomeReceita, 
+                    NomeReceita = nomeReceita,
                     Ingredientes = ingredientes,
                     Preparacao = preparacao,
                     Imagem = imagem,
-                    //Privacidade = privacidade,
+                    Privacidade = privacidade,
                 });
                 return true;
             }
