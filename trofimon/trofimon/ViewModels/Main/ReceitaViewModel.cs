@@ -87,7 +87,7 @@ namespace trofimon.ViewModels.Main
                 PropertyChanged(this, new PropertyChangedEventArgs("imgChoosed"));
             }
         }
-        
+
         //Guardar receita
         public Command GuardarReceitaCommand => new Command(GuardarReceita);
         private async void GuardarReceita()

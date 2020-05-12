@@ -74,6 +74,7 @@ namespace trofimon.ViewModels
                 if (user)
                 {
                     await App.Current.MainPage.DisplayAlert("Conta Registada com Sucesso", "", "Ok");
+                    await App.Current.MainPage.DisplayAlert("A sessão não sera guardade, terá que fazer o login", "", "Ok");
                     //login automatico
                     await App.Current.MainPage.Navigation.PushModalAsync(new Views.Main.MainTab(Email));
                     await App.Current.MainPage.Navigation.PopToRootAsync();

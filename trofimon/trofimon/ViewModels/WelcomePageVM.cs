@@ -8,7 +8,7 @@ using trofimon.ViewModels;
 
 namespace trofimon.ViewModel
 {
-   public class WelcomePageVM: INotifyPropertyChanged
+    public class WelcomePageVM : INotifyPropertyChanged
     {
         public WelcomePageVM(string email2)
         {
@@ -18,8 +18,8 @@ namespace trofimon.ViewModel
 
         public string Email
         {
-            get { return email; }
-            set { email = value; }
+            get => email;
+            set => email = value;
         }
         private string password;
 
@@ -27,31 +27,20 @@ namespace trofimon.ViewModel
 
         public string Password
         {
-            get { return password; }
-            set { password = value;
+            get => password;
+            set
+            {
+                password = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
-        public Command UpdateCommand
-        {
-            get { return new Command(Update); }
-        }
+        public Command UpdateCommand => new Command(Update);
 
-        public Command DeleteCommand
-        {
-            get { return new Command(Delete); }
-        }
+        public Command DeleteCommand => new Command(Delete);
+
         //For Logout
-        public Command LogoutCommand
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                     App.Current.MainPage.Navigation.PopAsync();
-                });
-            }
-        }
+        public Command LogoutCommand => new Command(() => { App.Current.MainPage.Navigation.PopAsync(); });
+
         //Update user data
         private async void Update()
         {
@@ -70,7 +59,6 @@ namespace trofimon.ViewModel
             }
             catch (Exception e)
             {
-
                 Debug.WriteLine($"Error:{e}");
             }
         }
@@ -87,7 +75,6 @@ namespace trofimon.ViewModel
             }
             catch (Exception e)
             {
-
                 Debug.WriteLine($"Error:{e}");
             }
         }

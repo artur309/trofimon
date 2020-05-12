@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,19 +6,13 @@ using trofimon.ViewModels.Main;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
-using Firebase.Storage;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.Diagnostics;
 using System.IO;
 using Plugin.Permissions.Abstractions;
 using trofimon.ViewModels;
-using System.ComponentModel;
-using System.Threading;
-using trofimon.ViewModel;
 using trofimon.Views;
-using trofimon.Utils;
-using EncryptStringSample;
 
 namespace trofimon.Views.Main
 {

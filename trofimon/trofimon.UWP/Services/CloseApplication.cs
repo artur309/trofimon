@@ -1,19 +1,19 @@
-﻿using trofimon.UWP;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System;
+using trofimon.UWP;
+using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
-using Windows.Storage;
 using Windows.UI.ViewManagement;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
-using Xamarin.Forms;
 
 namespace trofimon.UWP
 {

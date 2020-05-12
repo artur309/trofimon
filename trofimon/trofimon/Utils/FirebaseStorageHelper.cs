@@ -1,15 +1,15 @@
-﻿using System;
+﻿using Firebase.Storage;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using Firebase.Storage;
 using trofimon.Models;
 using trofimon.ViewModel;
-using Xamarin.Essentials;
 using trofimon.Views;
 using trofimon.Views.Form;
 using trofimon.Views.Main;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
