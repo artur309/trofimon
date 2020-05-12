@@ -10,13 +10,7 @@ namespace trofimon.Utils
     /// </summary>
     public static class Settings
     {
-        private static ISettings AppSettings
-        {
-            get
-            {
-                return CrossSettings.Current;
-            }
-        }
+        private static ISettings AppSettings => CrossSettings.Current;
 
         #region Setting Constants
 
@@ -28,14 +22,8 @@ namespace trofimon.Utils
 
         public static string LastUsedEmail
         {
-            get
-            {
-                return AppSettings.GetValueOrDefault(LastEmailSettingsKey, SettingsDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(LastEmailSettingsKey, value);
-            }
+            get => AppSettings.GetValueOrDefault(LastEmailSettingsKey, SettingsDefault);
+            set => AppSettings.AddOrUpdateValue(LastEmailSettingsKey, value);
         }
 
     }

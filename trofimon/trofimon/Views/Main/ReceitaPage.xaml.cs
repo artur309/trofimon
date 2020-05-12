@@ -38,6 +38,7 @@ namespace trofimon.Views.Main
             BindingContext = receitaViewModel;
         }
 
+        //galeria imagens
         private async void PickImg(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
@@ -68,6 +69,7 @@ namespace trofimon.Views.Main
             }
         }
 
+        //camera
         private async void CameraImg(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();

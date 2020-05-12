@@ -4,13 +4,14 @@ using Plugin.Settings.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Text;
 using System.Windows.Input;
 using trofimon.Views;
 using trofimon.Views.Form;
 using trofimon.Views.Main;
-using Xamarin.Forms;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 //private static ISettings AppSettings => CrossSettings.Current;
 
@@ -25,19 +26,25 @@ namespace trofimon.ViewModel
             get => Preferences.Get("lembrarSessao", false);
             set
             {
-                Preferences.Set("lembrarSessao", value);
+                try
+                {   //para fazer handle de sessao
+                    Preferences.Set("lembrarSessao", value);
+                    PropertyChanged(this, new PropertyChangedEventArgs("lembrarSessao"));
 
-                PropertyChanged(this, new PropertyChangedEventArgs("lembrarSessao"));
-
-                Application.Current.Properties["lembrarSessao"] = false;
-                Application.Current.SavePropertiesAsync();
+                    Application.Current.Properties["lembrarSessao"] = false;
+                    Application.Current.SavePropertiesAsync();
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine($"Error:{e}");
+                }
             }
         }
 
         private string email;
         public string Email
         {
-            get => Preferences.Get("Email",email);
+            get => Preferences.Get("Email", email);
             set
             {
                 Preferences.Set("Email", value);

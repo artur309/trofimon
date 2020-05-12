@@ -1,12 +1,12 @@
-﻿using System;
+﻿using EncryptStringSample;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using Xamarin.Forms;
-using trofimon.Views;
-using trofimon.ViewModel;
 using trofimon.Utils;
-using EncryptStringSample;
+using trofimon.ViewModel;
+using trofimon.Views;
+using Xamarin.Forms;
 
 namespace trofimon.ViewModels
 {
