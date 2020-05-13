@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using trofimon.Utils;
 using trofimon.ViewModel;
 using trofimon.Views;
 using Xamarin.Forms;

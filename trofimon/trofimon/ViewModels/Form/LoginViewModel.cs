@@ -52,8 +52,6 @@ namespace trofimon.ViewModel
 
                 Application.Current.Properties["Email"] = false;
                 Application.Current.SavePropertiesAsync();
-
-                Utils.Settings.LastUsedEmail = value;
             }
         }
         private string password;
@@ -71,7 +69,6 @@ namespace trofimon.ViewModel
 
         private async void Login()
         {
-            Email = Utils.Settings.LastUsedEmail;
             //validação, email ou password não é preenchida
             if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
             {
@@ -87,7 +84,6 @@ namespace trofimon.ViewModel
                     if (Email == user.Email && Password == user.Password)
                     {
                         //da-se o login e é enviado a informacao do utilizador pra mainPage
-
                         await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
                         await App.Current.MainPage.Navigation.PushAsync(new MainTab(Email));
                     }
