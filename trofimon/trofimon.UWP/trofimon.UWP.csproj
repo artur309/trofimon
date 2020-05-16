@@ -188,7 +188,10 @@
     <Content Include="chef.png" />
     <Content Include="cookbook.png" />
     <Content Include="criar.png" />
+    <Content Include="CurvedMask.png" />
+    <Content Include="DefaultProfile400x400.png" />
     <Content Include="fridge.png" />
+    <Content Include="HeaderBackground.png" />
     <Content Include="intro1.png" />
     <Content Include="intro2.png" />
     <Content Include="profile.png" />

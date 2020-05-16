@@ -19,19 +19,19 @@
                 <RowDefinition Height="AUTO" />
             </Grid.RowDefinitions>
 
-            <Button Text="Logout" HeightRequest="10" Clicked="LogoutBtn" />
+            <!--Button Text="Logout" Margin="0,0,0,-1" WidthRequest="1" HeightRequest="1" Clicked="LogoutBtn" /> -->
             
             <!-- header background -->
             <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
             <Image Source="CurvedMask.png" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>
 
             <!-- profile image -->
-            <Image Source="trofimon-pap.appspot.com/'65_gto.jpg" Margin="0,0,0,-50" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Image Source="DefaultProfile400x400.png" Margin="0,0,0,-50" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End"/>
 
             <!-- Profile Name -->
             <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
                 <Label HorizontalTextAlignment="Center" Text="{Binding Email}" Style="{StaticResource ProfileNameLabel}"/>
-                <Label HorizontalTextAlignment="Center" Text="Hipster Coffee Drinker" Margin="0,-5" Style="{StaticResource ProfileTagLabel}"/>
+                <Label HorizontalTextAlignment="Center" Text="Cozinheiro Master" Margin="0,-5" Style="{StaticResource ProfileTagLabel}"/>
             </StackLayout>
 
             <!-- Social Stats Section -->
@@ -43,17 +43,17 @@
                 </Grid.ColumnDefinitions>
 
                 <StackLayout>
-                    <Label Text="33" Style="{StaticResource StatsNumberLabel}"/>
+                    <Label Text="30" Style="{StaticResource StatsNumberLabel}"/>
                     <Label Text="Likes" Style="{StaticResource StatsCaptionLabel}"/>
                 </StackLayout>
 
                 <StackLayout Grid.Column="1">
-                    <Label Text="94" Style="{StaticResource StatsNumberLabel}"/>
+                    <Label Text="10" Style="{StaticResource StatsNumberLabel}"/>
                     <Label Text="Following" Style="{StaticResource StatsCaptionLabel}"/>
                 </StackLayout>
 
                 <StackLayout Grid.Column="2">
-                    <Label Text="957" Style="{StaticResource StatsNumberLabel}"/>
+                    <Label Text="420" Style="{StaticResource StatsNumberLabel}"/>
                     <Label Text="Followers" Style="{StaticResource StatsCaptionLabel}"/>
                 </StackLayout>
             </Grid>
@@ -61,7 +61,7 @@
             <!-- profile description -->
             <ScrollView Grid.Row="3">
                 <Label Margin="20,0" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" 
-                Text="Spicy jalapeno bacon ipsum dolor amet pork loin pork sint sed occaecat swine ham capicola deserunt pork belly frankfurter magna drumstick." />
+                Text="Cozinheiro de primeira classe. Adoro cozinha sul africana e italiana 😋" />
             </ScrollView>
 
             <!-- follow button -->
