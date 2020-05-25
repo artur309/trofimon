@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
-using trofimon.Models; 
+using trofimon.Models;
 using trofimon.ViewModel;
 using trofimon.Views;
 using trofimon.Views.Form;
@@ -121,10 +121,12 @@ namespace trofimon.ViewModel
         //Lista de Receitas
         public static async Task<List<Receitas>> GetAllReceitas()
         {
+            LoginViewModel loginViewModel = new LoginViewModel();
             try
             {
                 var receitaLista = (await firebase
                     .Child("Receitas")
+                    .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                     .OnceAsync<Receitas>()).Select(item =>
                 new Receitas
                 {
@@ -135,6 +137,25 @@ namespace trofimon.ViewModel
                     Privacidade = item.Object.Privacidade
                 }).ToList();
                 return receitaLista;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
+        
+        public static async Task<Users> GetReceita(string email)
+        {
+            LoginViewModel loginViewModel = new LoginViewModel();
+            try
+            {
+                var allReceitas = await GetAllUser();
+                await firebase
+                    .Child("Receitas")
+                    .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                    .OnceAsync<Receitas>();
+                return allReceitas.Where(a => a.Email == email).FirstOrDefault();
             }
             catch (Exception e)
             {

@@ -8,19 +8,19 @@
              NavigationPage.HasNavigationBar="false"
              NavigationPage.HasBackButton="False"
              NavigationPage.BackButtonTitle="false">
-        
+
     <ScrollView>
         <Grid ColumnSpacing="0" RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="AUTO" />
                 <RowDefinition Height="AUTO" />
                 <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="AUTO" />
             </Grid.RowDefinitions>
+            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Style="{StaticResource FollowButton}"/>
 
-            <!--Button Text="Logout" Margin="0,0,0,-1" WidthRequest="1" HeightRequest="1" Clicked="LogoutBtn" /> -->
-            
             <!-- header background -->
             <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
             <Image Source="CurvedMask.png" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>
@@ -30,9 +30,11 @@
 
             <!-- Profile Name -->
             <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
-                <Label HorizontalTextAlignment="Center" Text="{Binding Email}" Style="{StaticResource ProfileNameLabel}"/>
-                <Label HorizontalTextAlignment="Center" Text="Cozinheiro Master" Margin="0,-5" Style="{StaticResource ProfileTagLabel}"/>
+                <Label x:Name="labelNameProfile" HorizontalTextAlignment="Center" Text="{Binding Email}" Style="{StaticResource ProfileNameLabel}"/>
+                <Label HorizontalTextAlignment="Center" Text="Cozinheiro Master" Margin="0,-10" Style="{StaticResource ProfileTagLabel}"/>
             </StackLayout>
+            <!-- follow button -->
+            <Button Grid.Row="1" CornerRadius="0" WidthRequest="1" Text="Follow"  Margin="90,100,90,0" VerticalOptions="End" Style="{StaticResource FollowButton}"/>
 
             <!-- Social Stats Section -->
             <Grid Grid.Row="2" ColumnSpacing="0" RowSpacing="0" Margin="0,30">
@@ -64,8 +66,20 @@
                 Text="Cozinheiro de primeira classe. Adoro cozinha sul africana e italiana 😋" />
             </ScrollView>
 
-            <!-- follow button -->
-            <Button Grid.Row="4" Text="Follow" Margin="20" VerticalOptions="End" Style="{StaticResource FollowButton}"/>
+            <!--receitas lista do user -->
+            <ScrollView Grid.Row="4"  Orientation = "Vertical" HorizontalOptions="Fill">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <!--Label HorizontalOptions="Center" Text="😋" />
+                    <Label HorizontalOptions="Center" Text="😋" />
+                    <Label HorizontalOptions="Center" Text="😋" />
+                    <Label HorizontalOptions="Center" Text="😋" />
+                    <Label HorizontalOptions="Center" Text="😋" /-->
+                    <ListView x:Name="listaReceitas"  ItemsSource="{Binding Monkeys}">
+                        
+                    </ListView>
+                </StackLayout>
+
+            </ScrollView>
 
         </Grid>
     </ScrollView>

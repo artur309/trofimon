@@ -21,9 +21,10 @@ namespace trofimon
 
         public async Task<string> UploadFile(Stream fileStream, string fileName)
         {
+            LoginViewModel loginViewModel = new LoginViewModel();
             var imageUrl = await firebaseStorage
                 .Child("Receitas")
-                .Child("IdName")
+                .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 .Child(fileName)
                 .PutAsync(fileStream);
             return imageUrl;
@@ -31,18 +32,20 @@ namespace trofimon
 
         public async Task<string> GetFile(string fileName)
         {
+            LoginViewModel loginViewModel = new LoginViewModel();
             return await firebaseStorage
                 .Child("Receitas")
-                .Child("IdName")
+                .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 .Child(fileName)
                 .GetDownloadUrlAsync();
         }
 
         public async Task DeleteFile(string fileName)
         {
+            LoginViewModel loginViewModel = new LoginViewModel();
             await firebaseStorage
                 .Child("Receitas")
-                .Child("IdName")
+                .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 .Child(fileName)
                 .DeleteAsync();
         }
