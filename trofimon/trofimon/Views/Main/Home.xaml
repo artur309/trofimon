@@ -8,31 +8,39 @@
              NavigationPage.HasNavigationBar="false"
              NavigationPage.HasBackButton="False"
              NavigationPage.BackButtonTitle="false">
-    
-    <ScrollView HeightRequest="200">
+
+    <ScrollView>
+
         <StackLayout>
-            
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Label Text="Receitas CRIAR" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            
+            <Grid>
+                <SearchBar Placeholder="Procurar..." TextChanged="ProcurarTexto" />
+                <ListView  x:Name="searchResults" Margin="0,-100000"  />
+            </Grid>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+                <Label Text="Receitas CRIAR" />
+            </StackLayout>
+
         </StackLayout>
+
     </ScrollView>
-    
+
 </ContentPage>

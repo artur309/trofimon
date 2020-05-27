@@ -74,9 +74,8 @@
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" /-->
-                    <ListView x:Name="listaReceitas"  ItemsSource="{Binding Monkeys}">
-                        
-                    </ListView>
+                    <ListView x:Name="listaViewReceitas"/>
+                    
                 </StackLayout>
 
             </ScrollView>

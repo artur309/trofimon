@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -63,14 +64,52 @@ namespace trofimon.ViewModel
         }
 
         //Adicionar utilizador
-        public static async Task<bool> AddUser(string email, string password)
+        public static async Task<bool> AddUser(string email, string username, string password)
         {
             try
             {
-                await firebase
-                .Child("Users")
-                .PostAsync(new Users() { Email = email, Password = password });
-                return true;
+                //id automatico 
+                int IDUser = 0;
+                var idCount = await firebase
+                         .Child("Users")
+                         .OrderByKey()
+                         .OnceAsync<Users>();
+
+                foreach (var id in idCount)
+                {
+                    IDUser++;
+                    if (id.Object.Id == IDUser)
+                        IDUser++;
+                }
+
+                bool? accountAvailable = null;
+                //verificaoca de Utilizador
+                foreach (var id in idCount)
+                {
+                    if (id.Object.Email != email)
+                        accountAvailable = true;
+                    else
+                        accountAvailable = false;
+                }
+
+                //guarda novo user 
+                if (accountAvailable == false)
+                    return false;
+
+                else
+                {
+                    Debug.WriteLine("Erro");
+                    var user = await firebase
+                    .Child("Users")
+                    .PostAsync(new Users()
+                    {
+                        Email = email,
+                        Username = username,
+                        Password = password,
+                        Id = IDUser
+                    });
+                    return true;
+                }
             }
             catch (Exception e)
             {
@@ -144,18 +183,46 @@ namespace trofimon.ViewModel
                 return null;
             }
         }
-        
-        public static async Task<Users> GetReceita(string email)
-        {
-            LoginViewModel loginViewModel = new LoginViewModel();
+
+        public static async Task<ObservableCollection<Receitas>> GetReceita(string user)
+        {/*
+            var userlist = (await firebase
+                    .Child("Users")
+                    .OnceAsync<Users>()).Select(item =>
+                new Users
+                {
+                    Email = item.Object.Email,
+                    Password = item.Object.Password
+                }).ToList();
+            return userlist;
+            */
             try
             {
-                var allReceitas = await GetAllUser();
-                await firebase
+                var receitas = await firebase
                     .Child("Receitas")
-                    .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                    .Child(Preferences.Get(user, user))
+                    .OrderByKey()
                     .OnceAsync<Receitas>();
-                return allReceitas.Where(a => a.Email == email).FirstOrDefault();
+
+                ObservableCollection<Receitas> receitasList = new ObservableCollection<Receitas>();
+                foreach (var receita in receitas)
+                {
+                    receitasList
+                        .Select(item => 
+                        new Receitas
+                        {
+                            NomeReceita = receita.Object.NomeReceita,
+                        })
+                        .ToString();
+
+                    receitasList
+                        .Add(new Receitas
+                        {
+                            NomeReceita = Convert.ToString(receita.Object.NomeReceita),
+                        });
+                }
+                  
+                return receitasList;
             }
             catch (Exception e)
             {
