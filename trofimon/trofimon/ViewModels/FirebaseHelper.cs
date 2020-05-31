@@ -208,7 +208,7 @@ namespace trofimon.ViewModel
                 foreach (var receita in receitas)
                 {
                     receitasList
-                        .Select(item => 
+                        .Select(item =>
                         new Receitas
                         {
                             NomeReceita = receita.Object.NomeReceita,

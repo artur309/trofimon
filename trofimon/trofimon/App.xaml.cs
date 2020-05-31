@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using trofimon.ViewModel;
 using trofimon.Views;
 using trofimon.Views.Form;
 using trofimon.Views.Main;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace trofimon

@@ -14,9 +14,15 @@
         <StackLayout>
             <Grid>
                 <SearchBar Placeholder="Procurar..." TextChanged="ProcurarTexto" />
-                <ListView  x:Name="searchResults" Margin="0,-100000"  />
+                <ListView  x:Name="searchResults" Margin="0,-100000" />
             </Grid>
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <ListView x:Name="listaViewReceitas"  BackgroundColor="#5992FF">
+
+
+                </ListView>
+
                 <Label Text="Receitas CRIAR" />
                 <Label Text="Receitas CRIAR" />
                 <Label Text="Receitas CRIAR" />

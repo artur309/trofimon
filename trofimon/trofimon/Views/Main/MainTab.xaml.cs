@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Mime;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
@@ -32,7 +33,7 @@ namespace trofimon.Views.Main
             On<Android>().SetIsSwipePagingEnabled(false);
 
             //adicionar os icones no UWP
-            On<Windows>().SetHeaderIconsSize(new Size(24, 24));
+            On<Windows>().SetHeaderIconsSize(new Size(20, 20));
             On<Windows>().SetHeaderIconsEnabled(true);
 
             welcomePageVM = new WelcomePageVM(email);
