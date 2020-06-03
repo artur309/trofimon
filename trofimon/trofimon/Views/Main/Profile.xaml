@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
              mc:Ignorable="d"
              x:Class="trofimon.Views.Main.Profile"
              NavigationPage.HasNavigationBar="false"
@@ -60,6 +61,7 @@
                 </StackLayout>
             </Grid>
 
+            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Style="{StaticResource FollowButton}"/>
             <!-- profile description -->
             <ScrollView Grid.Row="3">
                 <Label Margin="20,0" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" 
@@ -68,15 +70,14 @@
 
             <!--receitas lista do user -->
             <ScrollView Grid.Row="4"  Orientation = "Vertical" HorizontalOptions="Fill">
-                <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                    <!--Label HorizontalOptions="Center" Text="😋" />
+
+                <!--Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" /-->
-                    <ListView x:Name="listaViewReceitas"/>
-                    
-                </StackLayout>
+                <ListView x:Name="listaViewReceitas" BackgroundColor="#5992FF"/>
+
 
             </ScrollView>
 

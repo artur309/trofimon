@@ -16,9 +16,6 @@ namespace trofimon.Views.Main
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainTab : Xamarin.Forms.TabbedPage
     {
-
-        // MainTab mainTab;string email
-
         WelcomePageVM welcomePageVM;
 
         public MainTab(string email)
@@ -40,10 +37,4 @@ namespace trofimon.Views.Main
             BindingContext = welcomePageVM;
         }
     }
-
-    /*private void CurrentPageHasChanged(object sender, EventArgs e)
-    {
-        var tabbedPage = (TabbedPage)sender;
-        Title = tabbedPage.CurrentPage.Title;
-    }*/
 }

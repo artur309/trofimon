@@ -19,45 +19,45 @@ using System.Collections.ObjectModel;
 using Firebase.Database;
 using trofimon.ViewModels.Main;
 using Firebase.Database.Query;
+using Xamarin.Essentials;
 
 namespace trofimon.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
-        public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/"); 
-        private ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>(); 
+        public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
+        private ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
+        LoginViewModel loginViewModel = new LoginViewModel();
 
         public Home()
         {
             InitializeComponent();
 
-            Task.Run(async () =>
-            {
-
-                LoginViewModel loginViewModel = new LoginViewModel();
-                ReceitaViewModel receitaViewModel = new ReceitaViewModel();
-
-                var receitas = await firebase
-                         .Child("Receitas")
-                         .Child("12")
-                         .OrderByKey()
-                         .OnceAsync<Receitas>();
-
-                foreach (var receita in receitas)
-                {
-                    ReceitaStringList.Add(receita.Object.NomeReceita);
-                }
-                //Console.WriteLine($"{receita.Key} is {receita.Object.NomeReceita}m high.");
-
-                BindingContext = this;
- 
-            });
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
+
+            var receitas = await firebase
+                     .Child("Receitas")
+                     .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                     .OrderByKey()
+                     .OnceAsync<Receitas>();
+
+            foreach (var receita in receitas)
+                ReceitaStringList.Add(receita.Object.NomeReceita);
+
+            listaViewReceitas.ItemsSource = null;
+            listaViewReceitas.ItemsSource = ReceitaStringList;
+        }
+
+        protected async override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            ReceitaStringList.Clear();
             listaViewReceitas.ItemsSource = ReceitaStringList;
         }
 

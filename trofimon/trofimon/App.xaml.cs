@@ -23,9 +23,15 @@ namespace trofimon
             //MainPage = new NavigationPage(new FormTab());
         }
 
+        public interface ICloseApplication
+        {
+            void closeApplication();
+        }
+
         // Handle when your app starts
         protected override void OnStart()
         {
+
             if (loginViewModel.lembrarSessao == true)
             {
                 //verifficar se tem sessao variabel
@@ -42,6 +48,27 @@ namespace trofimon
                 //MainPage = new NavigationPage(new FormTab());
                 Current.MainPage.DisplayAlert("Desligado", "", "Ok");
             }
+
+            /*
+             if (Connectivity.NetworkAccess == NetworkAccess.Internet){}
+            else
+            {
+                //App.Current.MainPage.Navigation.PopAsync();Application.Current.Quit();
+                Current.MainPage.DisplayAlert("Sem acesso Internet", "", "Fechar");
+
+                /*bool trueChecker = true;
+                if (trueChecker)
+                {
+                    Process.GetCurrentProcess().CloseMainWindow();
+                    Process.GetCurrentProcess().Close();
+                }
+
+                var closer = DependencyService.Get<ICloseApplication>();
+                if (closer != null)
+                {
+                    closer.closeApplication();
+                }
+            }*/
         }
 
         // Handle when your app sleeps

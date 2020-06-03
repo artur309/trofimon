@@ -221,7 +221,6 @@ namespace trofimon.ViewModel
                             NomeReceita = Convert.ToString(receita.Object.NomeReceita),
                         });
                 }
-                  
                 return receitasList;
             }
             catch (Exception e)

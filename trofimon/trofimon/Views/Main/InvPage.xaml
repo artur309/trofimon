@@ -13,6 +13,15 @@
             <Label Text="Inventario Friogorifico xD"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="123"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
