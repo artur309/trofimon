@@ -4,15 +4,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.IO;
+using System.ComponentModel;
 using trofimon.Models;
 using trofimon.ViewModel;
-using trofimon.ViewModels.Main;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,25 +18,20 @@ using Newtonsoft.Json.Linq;
 using Firebase.Database;
 using Firebase.Database.Query;
 using System.Diagnostics;
-using System.IO;
-using trofimon.ViewModels;
-using System.ComponentModel;
-using trofimon.Views.Form;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace trofimon.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profile : ContentPage
     {
-        public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/"); 
+        public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
         public ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
-        LoginViewModel loginViewModel = new LoginViewModel(); 
+        LoginViewModel loginViewModel = new LoginViewModel();
 
         public Profile()
         {
-            InitializeComponent(); 
-        } 
+            InitializeComponent();
+        }
 
         protected async override void OnAppearing()
         {
