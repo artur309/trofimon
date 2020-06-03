@@ -213,7 +213,7 @@ namespace trofimon.ViewModel
                         {
                             NomeReceita = receita.Object.NomeReceita,
                         })
-                        .ToString();
+                        .ToList();
 
                     receitasList
                         .Add(new Receitas

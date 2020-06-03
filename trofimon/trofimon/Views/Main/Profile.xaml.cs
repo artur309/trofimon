@@ -67,5 +67,10 @@ namespace trofimon.Views.Main
             Application.Current.SavePropertiesAsync();
             App.Current.MainPage.Navigation.PopModalAsync();
         }
+
+        private async void listaViewReceitas_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            await Navigation.PushAsync(new ReceitaDetailedView(e.Item.ToString(), Preferences.Get(loginViewModel.Email, loginViewModel.Email)));
+        }
     }
 }

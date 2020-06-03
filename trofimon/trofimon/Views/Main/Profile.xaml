@@ -76,7 +76,7 @@
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" />
                     <Label HorizontalOptions="Center" Text="😋" /-->
-                <ListView x:Name="listaViewReceitas" BackgroundColor="#5992FF"/>
+                <ListView x:Name="listaViewReceitas" BackgroundColor="#5992FF" ItemTapped="listaViewReceitas_ItemTapped"/>
 
 
             </ScrollView>

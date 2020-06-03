@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="trofimon.Views.Main.ReceitaDetailedView"
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.BackButtonTitle="false">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" x:Name="NomeReceita" Text="2{Binding NomeReceita}"  HorizontalOptions="CenterAndExpand" Margin="10,10"/>
+
+                <Label BackgroundColor="#cdcd66" Grid.Row="1" Text="Imagem" Margin="10,10"/>
+
+                <Label BackgroundColor="#cdcd66" Grid.Row="3"  Text="Ingredientes"/>
+                <Label  Grid.Row="3"  x:Name="Ingredientes" Text="2{Binding Ingredientes}" Margin="100,50"/>
+
+                <Label BackgroundColor="#cdcd66" Grid.Row="4 " Text="Preparacao"/>
+                <Label Grid.Row="4"  x:Name="Preparacao" Text="2{Binding Preparacao}" Margin="100,10"/>
+
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

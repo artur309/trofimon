@@ -60,13 +60,9 @@ namespace trofimon.ViewModels
         public Command SignUpCommand => new Command(() =>
         {
             if (Password == ConfirmPassword)
-            {
                 SignUp();
-            }
             else
-            {
                 App.Current.MainPage.DisplayAlert("", "Password must be same as above!", "OK");
-            }
         });
 
         bool ValidacaoEmail(string email)
