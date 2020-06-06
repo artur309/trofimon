@@ -33,7 +33,6 @@ namespace trofimon.Views.Main
         public Home()
         {
             InitializeComponent();
-
         }
 
         protected async override void OnAppearing()
@@ -61,48 +60,9 @@ namespace trofimon.Views.Main
             listaViewReceitas.ItemsSource = ReceitaStringList;
         }
 
-        void ProcurarTexto(object sender, EventArgs e)
+        private void ButtonClicked(object sender, EventArgs e)
         {
-            SearchBar searchBar = (SearchBar)sender;
-            searchResults.ItemsSource = "OH";
+            Navigation.PushAsync(new searchView());
         }
-
-        /*
-         *<SearchBar Placeholder="Procurar..." TextChanged="ProcurarTexto"
-                             SearchCommand="{Binding PerformSearch}"
-                    SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
-                 <ListView  x:Name="searchResults" Margin="0,-100000" ItemsSource="{Binding SearchResults}" />
-         * 
-         * 
-         * 
-         * 
-         * public class SearchViewModel : INotifyPropertyChanged
-         {
-             public event PropertyChangedEventHandler PropertyChanged;
-
-             protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-             {
-                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-             }
-
-             public ICommand PerformSearch => new Command<string>((string query) =>
-             {
-                 SearchResults = FirebaseHelper.GetReceita("12");
-             });
-
-             private List<string> searchResults = Receitas.Fruits;
-             public List<string> SearchResults
-             {
-                 get
-                 {
-                     return searchResults;
-                 }
-                 set
-                 {
-                     searchResults = value;
-                     NotifyPropertyChanged();
-                 }
-             }
-         } */
     }
 }

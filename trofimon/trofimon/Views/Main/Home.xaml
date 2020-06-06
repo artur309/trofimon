@@ -10,43 +10,15 @@
              NavigationPage.BackButtonTitle="false">
 
     <ScrollView>
-
         <StackLayout>
-            <Grid>
-                <SearchBar Placeholder="Procurar..." TextChanged="ProcurarTexto" />
-                <ListView  x:Name="searchResults" Margin="0,-100000" />
-            </Grid>
+
+            <Button Text="Search" BackgroundColor="#B5BE53" Clicked="ButtonClicked"/>
+
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-
-                <ListView x:Name="listaViewReceitas"  BackgroundColor="#5992FF">
-
-
-                </ListView>
-
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
-                <Label Text="Receitas CRIAR" />
+                <ListView x:Name="listaViewReceitas"  BackgroundColor="#5992FF"/>
             </StackLayout>
 
         </StackLayout>
-
     </ScrollView>
 
 </ContentPage>
