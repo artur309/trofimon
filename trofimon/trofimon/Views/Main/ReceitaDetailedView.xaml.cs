@@ -26,7 +26,6 @@ namespace trofimon.Views.Main
         public ReceitaDetailedView(string receitaNome, string user)
         {
             InitializeComponent();
-
             Task.Run(async () =>
             {
 
@@ -41,7 +40,6 @@ namespace trofimon.Views.Main
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
 
             ReceitaViewModel receitaViewModel = new ReceitaViewModel();
 

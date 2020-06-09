@@ -6,6 +6,7 @@
     <ApplicationIcon>TrofimonLogo.ico</ApplicationIcon>
     <Win32Resource />
     <DisableEmbeddedXbf>false</DisableEmbeddedXbf>
+    <Product>Trofimon</Product>
   </PropertyGroup>
 
   <ItemGroup>

@@ -92,6 +92,7 @@ namespace trofimon.Views.Main
                 Debug.WriteLine(ex.Message);
             }
         }
+
         private async void guardaIMG(object sender, EventArgs e) => await firebaseStorageHelper.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
     }
 }
