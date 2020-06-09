@@ -41,7 +41,6 @@ namespace trofimon.Views.Main
 
             var receitas = await firebase
                      .Child("Receitas")
-                     .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                      .OrderByKey()
                      .OnceAsync<Receitas>();
 

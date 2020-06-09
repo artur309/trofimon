@@ -21,6 +21,18 @@ namespace trofimon.ViewModels.Main
     public class ReceitaViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        LoginViewModel loginViewModel = new LoginViewModel();
+
+        private string userReceita;
+        public string UserReceita
+        {
+            get => Preferences.Get(loginViewModel.Email, loginViewModel.Email);
+            set
+            {
+                userReceita = Preferences.Get(loginViewModel.Email, loginViewModel.Email);
+                PropertyChanged(this, new PropertyChangedEventArgs("UserReceita"));
+            }
+        }
 
         private string nomeReceita;
         public string NomeReceita
@@ -94,7 +106,7 @@ namespace trofimon.ViewModels.Main
         {
             //validação, email ou password não é preenchida
 
-            var receita = await FirebaseHelper.AddReceita(NomeReceita, Ingredientes, Preparacao, ImagemPath, Privacidade);
+            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ImagemPath, Privacidade);
             //Adiciona User 
             if (receita)
                 //await firebaseStorageHelper.UploadFile(file.GetStream(), Path.GetFileName(file.Path));

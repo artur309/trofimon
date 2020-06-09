@@ -44,9 +44,9 @@ namespace trofimon.Views.Main
                 if (permissoes != Xamarin.Essentials.PermissionStatus.Granted)
                     return;
 
-                file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
                 {
-                    PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+                    PhotoSize = PhotoSize.Medium
                 });
 
                 if (file == null) return;

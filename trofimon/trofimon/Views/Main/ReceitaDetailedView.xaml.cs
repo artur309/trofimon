@@ -26,13 +26,8 @@ namespace trofimon.Views.Main
         public ReceitaDetailedView(string receitaNome, string user)
         {
             InitializeComponent();
-            Task.Run(async () =>
-            {
-
-            });
 
             receitaDetalhes.NomeReceita = receitaNome;
-            userReceita = user;
 
             BindingContext = this;
         }
@@ -45,7 +40,6 @@ namespace trofimon.Views.Main
 
             var idCount = await firebase
                      .Child("Receitas")
-                     .Child(userReceita)
                      .OrderByKey()
                      .OnceAsync<Receitas>();
 

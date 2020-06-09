@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
 using trofimon.Models;
@@ -231,16 +232,16 @@ namespace trofimon.ViewModel
         }
 
         //Adicionar Receita
-        public static async Task<bool> AddReceita(string nomeReceita, string ingredientes, string preparacao, string imagem, bool privacidade)
+        public static async Task<bool> AddReceita(string userReceita, string nomeReceita, string ingredientes, string preparacao, string imagem, bool privacidade)
         {
             LoginViewModel loginViewModel = new LoginViewModel();
             try
             {
                 await firebase
                 .Child("Receitas")
-                .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 .PostAsync(new Receitas()
                 {
+                    UserReceita = userReceita,
                     NomeReceita = nomeReceita,
                     Ingredientes = ingredientes,
                     Preparacao = preparacao,

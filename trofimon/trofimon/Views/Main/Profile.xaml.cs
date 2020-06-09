@@ -39,12 +39,14 @@ namespace trofimon.Views.Main
 
             var receitas = await firebase
                      .Child("Receitas")
-                     .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                      .OrderByKey()
                      .OnceAsync<Receitas>();
 
             foreach (var receita in receitas)
-                ReceitaStringList.Add(receita.Object.NomeReceita);
+            {
+                if (receita.Object.UserReceita == Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                    ReceitaStringList.Add(receita.Object.NomeReceita);
+            }
 
             listaViewReceitas.ItemsSource = null;
             listaViewReceitas.ItemsSource = ReceitaStringList;
