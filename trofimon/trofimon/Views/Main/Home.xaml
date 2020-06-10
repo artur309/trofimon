@@ -9,13 +9,17 @@
              NavigationPage.HasBackButton="False"
              NavigationPage.BackButtonTitle="false">
 
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/Main/home.css" />
+    </ContentPage.Resources>
+
     <ScrollView>
         <StackLayout>
 
             <Button Text="Search" BackgroundColor="#B5BE53" Clicked="ButtonClicked"/>
 
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <ListView x:Name="listaViewReceitas"  BackgroundColor="#5992FF"/>
+                <ListView x:Name="listaViewReceitas"  BackgroundColor="White"/>
             </StackLayout>
 
         </StackLayout>

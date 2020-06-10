@@ -1,25 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Firebase.Storage;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-using System.Diagnostics;
-using System.IO;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using System.ComponentModel;
-using System.Windows.Input;
-using System.Runtime.CompilerServices;
+﻿using Firebase.Database;
+using Firebase.Database.Query;
+using System;
+using System.Collections.ObjectModel;
 using trofimon.Models;
 using trofimon.ViewModel;
-using System.Collections.ObjectModel;
-using Firebase.Database;
-using trofimon.ViewModels.Main;
-using Firebase.Database.Query;
-using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace trofimon.Views.Main
 {
@@ -28,7 +14,7 @@ namespace trofimon.Views.Main
     {
         public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
         private ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
-        LoginViewModel loginViewModel = new LoginViewModel();
+        private LoginViewModel loginViewModel = new LoginViewModel();
 
         public Home()
         {

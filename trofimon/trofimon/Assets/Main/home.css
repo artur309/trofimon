@@ -1,0 +1,7 @@
+﻿listview {
+    color: black;
+}
+
+    listview > ViewCell {
+        color: black;
+    }
