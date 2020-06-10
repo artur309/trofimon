@@ -1,7 +1,18 @@
-﻿listview {
+﻿.listviewStyle {
     color: black;
 }
 
-    listview > ViewCell {
-        color: black;
-    }
+ListView StackLayout Label {
+    font-size: 14;
+    color: black;
+}
+
+.listviewStyle > TextCell {
+    color: black;
+}
+
+.listviewStyle > Label {
+    font-style: bold;
+    font-size: 14px;
+    color: black;
+}
