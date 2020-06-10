@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Firebase.Database;
+using Firebase.Database.Query;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using trofimon.Models;
 using trofimon.ViewModel;
 using trofimon.ViewModels.Main;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Firebase.Database;
-using Firebase.Database.Query;
-using trofimon.Models;
 
 namespace trofimon.Views.Main
 {
@@ -19,9 +14,9 @@ namespace trofimon.Views.Main
     {
         public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
         public ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
-        LoginViewModel loginViewModel = new LoginViewModel();
-        Receitas receitaDetalhes = new Receitas();
-        string userReceita;
+        private LoginViewModel loginViewModel = new LoginViewModel();
+        private Receitas receitaDetalhes = new Receitas();
+        private string userReceita;
 
         public ReceitaDetailedView(string receitaNome, string user)
         {

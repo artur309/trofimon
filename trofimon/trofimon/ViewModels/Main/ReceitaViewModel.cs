@@ -89,14 +89,14 @@ namespace trofimon.ViewModels.Main
             }
         }
 
-        private ImageSource imgChoosed;
-        public ImageSource ImageSource
+        private FileImageSource imgChoosed;
+        public FileImageSource ImgChoosed
         {
             get => imgChoosed;
             set
             {
                 imgChoosed = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("imgChoosed"));
+                PropertyChanged(this, new PropertyChangedEventArgs("ImgChoosed"));
             }
         }
 
@@ -106,13 +106,13 @@ namespace trofimon.ViewModels.Main
         {
             //validação, email ou password não é preenchida
 
-            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ImagemPath, Privacidade);
+            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ImgChoosed, Privacidade);
             //Adiciona User 
             if (receita)
                 //await firebaseStorageHelper.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
-                await App.Current.MainPage.DisplayAlert("Receita guardada com Sucesso", "", "Ok");
+                await App.Current.MainPage.DisplayAlert("Receita guardada com Sucesso", "Sucesso", "OK");
             else
-                await App.Current.MainPage.DisplayAlert("Error", "Erro ao guardar receita", "OK");
+                await App.Current.MainPage.DisplayAlert("Erro ao guardar receita", "Error", "OK");
         }
     }
 }
