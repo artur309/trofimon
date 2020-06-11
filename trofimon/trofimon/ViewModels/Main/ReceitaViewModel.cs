@@ -1,27 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
-using System.Threading;
-using System.IO;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using trofimon.ViewModel;
-using Xamarin.Forms;
-using trofimon.Views;
-using trofimon.ViewModels.Main;
 using Xamarin.Essentials;
-using Firebase.Storage;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-using Plugin.Permissions.Abstractions;
+using Xamarin.Forms;
 
 namespace trofimon.ViewModels.Main
 {
     public class ReceitaViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        LoginViewModel loginViewModel = new LoginViewModel();
+        private LoginViewModel loginViewModel = new LoginViewModel();
 
         private string userReceita;
         public string UserReceita
@@ -78,17 +67,6 @@ namespace trofimon.ViewModels.Main
             }
         }
 
-        private bool privacidade;
-        public bool Privacidade
-        {
-            get => privacidade;
-            set
-            {
-                privacidade = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("Privacidade"));
-            }
-        }
-
         private FileImageSource imgChoosed;
         public FileImageSource ImgChoosed
         {
@@ -100,16 +78,37 @@ namespace trofimon.ViewModels.Main
             }
         }
 
+        public bool receitaPrivacidade
+        {
+            get => Preferences.Get("receitaPrivacidade", false);
+            set
+            {
+                try
+                {   //para fazer handle de sessao
+                    Preferences.Set("receitaPrivacidade", value);
+                    PropertyChanged(this, new PropertyChangedEventArgs("receitaPrivacidade"));
+
+                    Application.Current.Properties["receitaPrivacidade"] = false;
+                    Application.Current.SavePropertiesAsync();
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine($"Error:{e}");
+                }
+            }
+        }
+
         //Guardar receita
         public Command GuardarReceitaCommand => new Command(GuardarReceita);
+
         private async void GuardarReceita()
         {
             //validação, email ou password não é preenchida
+            await App.Current.MainPage.DisplayAlert(ImagemPath, "Imagem", "OK");
 
-            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ImgChoosed, Privacidade);
-            //Adiciona User 
+            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ImgChoosed, receitaPrivacidade);
+            //Adiciona User
             if (receita)
-                //await firebaseStorageHelper.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
                 await App.Current.MainPage.DisplayAlert("Receita guardada com Sucesso", "Sucesso", "OK");
             else
                 await App.Current.MainPage.DisplayAlert("Erro ao guardar receita", "Error", "OK");

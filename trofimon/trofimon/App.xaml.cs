@@ -79,7 +79,7 @@ namespace trofimon
         // Handle when your app resumes
         protected override void OnResume()
         {
-            Current.MainPage.DisplayAlert("PUNK where did u go????", "", "Ok");
+            //Current.MainPage.DisplayAlert("PUNK where did u go????", "", "Ok");
         }
     }
 }

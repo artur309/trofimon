@@ -70,10 +70,9 @@ namespace trofimon.ViewModel
         private async void Login()
         {
             //validação, email ou password não é preenchida
-            if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
-            {
-                await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
-            }
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+                await App.Current.MainPage.DisplayAlert("Valores vazios", "Inseria Email ou Password", "OK");
+
             else
             {
                 var user = await FirebaseHelper.GetUser(Email);
@@ -88,14 +87,11 @@ namespace trofimon.ViewModel
                         await App.Current.MainPage.Navigation.PushAsync(new MainTab(Email));
                     }
                     else
-                    {
                         await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
-                    }
                 }
                 else
-                {
                     await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
-                }
+
             }
         }
     }

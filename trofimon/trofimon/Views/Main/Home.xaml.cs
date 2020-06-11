@@ -31,7 +31,10 @@ namespace trofimon.Views.Main
                      .OnceAsync<Receitas>();
 
             foreach (var receita in receitas)
-                ReceitaStringList.Add(receita.Object.NomeReceita);
+            {
+                if (receita.Object.Privacidade == false)
+                    ReceitaStringList.Add(receita.Object.NomeReceita);
+            }
 
             listaViewReceitas.ItemsSource = null;
             listaViewReceitas.ItemsSource = ReceitaStringList;
