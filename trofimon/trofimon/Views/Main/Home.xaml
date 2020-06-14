@@ -16,10 +16,10 @@
     <ScrollView>
         <StackLayout>
 
-            <Button Text="Search" BackgroundColor="#B5BE53" Clicked="ButtonClicked" />
+            <Button Text="Procurar 🔎" BackgroundColor="#B5BE53" Clicked="ButtonClicked" />
 
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <ListView x:Name="listaViewReceitas"  BackgroundColor="White"  StyleClass="listviewStyle" >
+                <ListView x:Name="listaViewReceitas"  BackgroundColor="White"  StyleClass="listviewStyle">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -31,7 +31,6 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-            
         </StackLayout>
     </ScrollView>
 </ContentPage>

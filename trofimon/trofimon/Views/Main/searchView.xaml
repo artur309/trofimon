@@ -4,7 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="trofimon.Views.Main.searchView">
+             x:Class="trofimon.Views.Main.searchView"
+             NavigationPage.HasNavigationBar="false"
+             NavigationPage.BackButtonTitle="false">
+
     <StackLayout>
         <SearchBar x:Name="searchBar"  TextChanged="OnTextChanged" />
 
@@ -12,11 +15,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding .}" FontSize="20" Margin="20,5"/>
+                        <Label Text="{Binding .}" FontSize="20" Margin="20,5" />
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
     </StackLayout>
 </ContentPage>

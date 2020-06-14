@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Firebase.Database;
+using Firebase.Database.Query;
+using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using System.IO;
-using System.ComponentModel;
 using trofimon.Models;
 using trofimon.ViewModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Firebase.Database;
-using Firebase.Database.Query;
-using System.Diagnostics;
 
 namespace trofimon.Views.Main
 {
@@ -26,7 +15,8 @@ namespace trofimon.Views.Main
     {
         public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
         public ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
-        LoginViewModel loginViewModel = new LoginViewModel();
+        private LoginViewModel loginViewModel = new LoginViewModel();
+        private int NumReceitas { get; }
 
         public Profile()
         {
@@ -35,6 +25,7 @@ namespace trofimon.Views.Main
 
         protected async override void OnAppearing()
         {
+            int countReceitas = 0;
             base.OnAppearing();
 
             var receitas = await firebase
@@ -45,11 +36,17 @@ namespace trofimon.Views.Main
             foreach (var receita in receitas)
             {
                 if (receita.Object.UserReceita == Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                {
                     ReceitaStringList.Add(receita.Object.NomeReceita);
+                    countReceitas++;
+                }
             }
 
             listaViewReceitas.ItemsSource = null;
             listaViewReceitas.ItemsSource = ReceitaStringList;
+
+            receitasLabel.Text = ""+countReceitas;
+            BindingContext = this;
         }
 
         protected async override void OnDisappearing()

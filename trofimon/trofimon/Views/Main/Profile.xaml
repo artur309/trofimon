@@ -20,22 +20,25 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="AUTO" />
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Style="{StaticResource FollowButton}"/>
+
+            <!--logout botao -->
+            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Style="{StaticResource FollowButton}" />
 
             <!-- header background -->
-            <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
-            <Image Source="CurvedMask.png" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>
+            <Image Source="HeaderBackground.png" Aspect="AspectFill" />
+            <Image Source="CurvedMask.png" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1" />
 
             <!-- profile image -->
-            <Image Source="DefaultProfile400x400.png" Margin="0,0,0,-50" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Image Source="DefaultProfile400x400.png" Margin="0,0,0,-40" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End" />
 
             <!-- Profile Name -->
             <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
-                <Label x:Name="labelNameProfile" HorizontalTextAlignment="Center" Text="{Binding Email}" Style="{StaticResource ProfileNameLabel}"/>
-                <Label HorizontalTextAlignment="Center" Text="Cozinheiro Master" Margin="0,-10" Style="{StaticResource ProfileTagLabel}"/>
+                <Label x:Name="labelNameProfile" HorizontalTextAlignment="Center" Text="{Binding Email}" Style="{StaticResource ProfileNameLabel}" />
+                <Label HorizontalTextAlignment="Center" Text="Cozinheiro Master" Margin="0,-10" Style="{StaticResource ProfileTagLabel}" />
             </StackLayout>
+
             <!-- follow button -->
-            <Button Grid.Row="1" CornerRadius="0" WidthRequest="1" Text="Follow"  Margin="90,100,90,0" VerticalOptions="End" Style="{StaticResource FollowButton}"/>
+            <Button Grid.Row="1" CornerRadius="0" WidthRequest="1" Text="Follow"  Margin="90,100,90,0" VerticalOptions="End" Style="{StaticResource FollowButton}" />
 
             <!-- Social Stats Section -->
             <Grid Grid.Row="2" ColumnSpacing="0" RowSpacing="0" Margin="0,30">
@@ -46,41 +49,38 @@
                 </Grid.ColumnDefinitions>
 
                 <StackLayout>
-                    <Label Text="30" Style="{StaticResource StatsNumberLabel}"/>
-                    <Label Text="Likes" Style="{StaticResource StatsCaptionLabel}"/>
+                    <Label Text="X" Style="{StaticResource StatsNumberLabel}" />
+                    <Label Text="Likes" Style="{StaticResource StatsCaptionLabel}" />
                 </StackLayout>
 
                 <StackLayout Grid.Column="1">
-                    <Label Text="10" Style="{StaticResource StatsNumberLabel}"/>
-                    <Label Text="Following" Style="{StaticResource StatsCaptionLabel}"/>
+                    <Label Text="X" Style="{StaticResource StatsNumberLabel}" />
+                    <Label Text="Following" Style="{StaticResource StatsCaptionLabel}" />
                 </StackLayout>
 
                 <StackLayout Grid.Column="2">
-                    <Label Text="420" Style="{StaticResource StatsNumberLabel}"/>
-                    <Label Text="Followers" Style="{StaticResource StatsCaptionLabel}"/>
+                    <Label Text="X" Style="{StaticResource StatsNumberLabel}" />
+                    <Label Text="Followers" Style="{StaticResource StatsCaptionLabel}" />
                 </StackLayout>
             </Grid>
 
-            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Style="{StaticResource FollowButton}"/>
+            <!--numero de receitas -->
+            <Grid Grid.Row="2">
+                <StackLayout Grid.Row="1"  Margin="0,10">
+                    <Label x:Name="receitasLabel" Style="{StaticResource StatsNumberLabel}" />
+                    <Label Text="Número Receitas" Style="{StaticResource StatsCaptionLabel}" />
+                </StackLayout>
+            </Grid>
+
             <!-- profile description -->
             <ScrollView Grid.Row="3">
-                <Label Margin="20,0" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" 
-                Text="Cozinheiro de primeira classe. Adoro cozinha sul africana e italiana 😋" />
+                <Label Margin="10,0" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" Text="Cozinheiro de primeira classe. Adoro cozinha sul africana e italiana 😋" />
             </ScrollView>
 
             <!--receitas lista do user -->
             <ScrollView Grid.Row="4"  Orientation = "Vertical" HorizontalOptions="Fill">
-
-                <!--Label HorizontalOptions="Center" Text="😋" />
-                    <Label HorizontalOptions="Center" Text="😋" />
-                    <Label HorizontalOptions="Center" Text="😋" />
-                    <Label HorizontalOptions="Center" Text="😋" />
-                    <Label HorizontalOptions="Center" Text="😋" /-->
-                <ListView x:Name="listaViewReceitas" BackgroundColor="#5992FF" ItemTapped="listaViewReceitas_ItemTapped"/>
-
-
+                <ListView x:Name="listaViewReceitas" BackgroundColor="White" ItemTapped="listaViewReceitas_ItemTapped" />
             </ScrollView>
-
         </Grid>
     </ScrollView>
 </ContentPage>
