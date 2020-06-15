@@ -19,7 +19,7 @@
             <Button Text="Procurar 🔎" BackgroundColor="#B5BE53" Clicked="ButtonClicked" />
 
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <ListView x:Name="listaViewReceitas"  BackgroundColor="White"  StyleClass="listviewStyle">
+                <ListView x:Name="listaViewReceitas"  BackgroundColor="White"  StyleClass="listviewStyle" ItemTapped="listaViewReceitas_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

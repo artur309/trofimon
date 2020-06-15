@@ -15,10 +15,9 @@ namespace trofimon.Views.Main
         public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
         public ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
         private LoginViewModel loginViewModel = new LoginViewModel();
-        private Receitas receitaDetalhes = new Receitas();
-        private string userReceita;
+        private Receitas receitaDetalhes = new Receitas(); 
 
-        public ReceitaDetailedView(string receitaNome, string user)
+        public ReceitaDetailedView(string receitaNome)
         {
             InitializeComponent();
 
@@ -44,6 +43,7 @@ namespace trofimon.Views.Main
                 {
                     receitaDetalhes.Ingredientes = id.Object.Ingredientes;
                     receitaDetalhes.Preparacao = id.Object.Preparacao;
+                    receitaDetalhes.UserReceita = id.Object.UserReceita;
                     break;
                 }
             }
@@ -62,6 +62,13 @@ namespace trofimon.Views.Main
             this.Preparacao.Text = receitaDetalhes.Preparacao;
             Preparacao.BindingContext = receitaDetalhes.Preparacao;
             //ReceitaNome.SetBinding(Label.text);
+
+            //preaparacao receita
+            this.UserReceita.Text = receitaDetalhes.UserReceita;
+            UserReceita.BindingContext = receitaDetalhes.UserReceita;
+
+            imgReceita.Source = "https://via.placeholder.com/300";
+
             BindingContext = this;
         }
     }

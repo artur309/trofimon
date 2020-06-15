@@ -22,8 +22,11 @@
 
                 <Label Grid.Row="0" x:Name="NomeReceita" Text="2{Binding NomeReceita}"  HorizontalOptions="CenterAndExpand" Margin="10,10"/>
 
-                <Label BackgroundColor="#cdcd66" Grid.Row="1" Text="Imagem" Margin="10,10"/>
+                <Label BackgroundColor="#cdcd66" Grid.Row="1" Text="Imagem" Margin="0,10"/>
                 <Image x:Name="imgReceita"/>
+
+                <Label BackgroundColor="White" Grid.Row="2"  Text="UserReceita"/>
+                <Label  Grid.Row="2"  x:Name="UserReceita" Text="2{Binding UserReceita}" Margin="0,20"/>
 
                 <Label BackgroundColor="#cdcd66" Grid.Row="3"  Text="Ingredientes"/>
                 <Label  Grid.Row="3"  x:Name="Ingredientes" Text="2{Binding Ingredientes}" Margin="100,50"/>
