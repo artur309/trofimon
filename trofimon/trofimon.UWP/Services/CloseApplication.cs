@@ -21,7 +21,7 @@ namespace trofimon.UWP
     {
         public void closeApplication()
         {
-            Application.Current.Exit();
+           // Application.Current.Exit();
         }
     }
 }

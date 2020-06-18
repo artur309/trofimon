@@ -41,12 +41,12 @@ namespace trofimon
                     string userId = loginViewModel.Email;
                     Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(userId, userId)));
                 }
-                Current.MainPage.DisplayAlert("Ligado", "", "Ok");
+               // Current.MainPage.DisplayAlert("Ligado", "", "Ok");
             }
             else
             {
                 //MainPage = new NavigationPage(new FormTab());
-                Current.MainPage.DisplayAlert("Desligado", "", "Ok");
+                //Current.MainPage.DisplayAlert("Desligado", "", "Ok");
             }
 
             /*
