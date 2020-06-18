@@ -6,23 +6,22 @@
              mc:Ignorable="d"
              x:Class="trofimon.Views.Form.Intro"
              NavigationPage.HasNavigationBar="false">
-    
+
     <ContentPage>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-            <Image Source="intro1.png"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="intro1.png" />
         </StackLayout>
     </ContentPage>
-    
+
     <ContentPage>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-            <Image Source="intro2.png"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="intro2.png" />
         </StackLayout>
     </ContentPage>
-    
-    <ContentPage>   
+
+    <ContentPage>
         <StackLayout VerticalOptions="Center">
-            <Button VerticalOptions="Center"  HorizontalOptions="Center" Text="Continuar" Clicked="Button_Clicked"/>
+            <Button VerticalOptions="Center"  HorizontalOptions="Center" Text="Continuar" Clicked="Button_Clicked" Padding="100,100" />
         </StackLayout>
     </ContentPage>
-        
 </CarouselPage>
