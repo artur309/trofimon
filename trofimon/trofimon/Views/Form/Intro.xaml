@@ -6,28 +6,21 @@
              mc:Ignorable="d"
              x:Class="trofimon.Views.Form.Intro"
              NavigationPage.HasNavigationBar="false">
+    
     <ContentPage>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-            <Label Text="ImageSource.FromFile" />
             <Image Source="intro1.png"/>
-            <Label Text="'logostar.png' is referenced in Xaml" />
         </StackLayout>
     </ContentPage>
     
     <ContentPage>
-        <ContentPage.Padding>
-            <OnPlatform x:TypeArguments="Thickness">
-                <On Platform="iOS, Android" Value="0,40,0,0" />
-            </OnPlatform>
-        </ContentPage.Padding>
-        <StackLayout>
-            <Label Text="Green" FontSize="Medium" HorizontalOptions="Center" />
-            <BoxView Color="Green" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+            <Image Source="intro2.png"/>
         </StackLayout>
     </ContentPage>
     
     <ContentPage>   
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Button VerticalOptions="Center"  HorizontalOptions="Center" Text="Continuar" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage>

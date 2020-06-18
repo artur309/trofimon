@@ -15,7 +15,14 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding .}" FontSize="20" Margin="20,5" />
+                        <!--Label FontSize="20" Margin="20,5" /-->
+                        <Label Text="{Binding .}" IsVisible="{Binding FooterIsVisible}">
+                            <Label.Triggers>
+                                <Trigger TargetType="Label" Property="IsVisible" Value="False">
+                                    <Setter Property="HeightRequest" Value="0" />
+                                </Trigger>
+                            </Label.Triggers>
+                        </Label>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -22,11 +22,12 @@ namespace trofimon
         public async Task<string> UploadFile(Stream fileStream, string fileName)
         {
             LoginViewModel loginViewModel = new LoginViewModel();
-            var imageUrl = await firebaseStorage
+            var storageImage = await firebaseStorage
                 .Child("Receitas")
                 .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 .Child(fileName)
                 .PutAsync(fileStream);
+            string imageUrl = storageImage;
             return imageUrl;
         }
 

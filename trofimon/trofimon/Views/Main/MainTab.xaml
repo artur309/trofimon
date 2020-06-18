@@ -19,11 +19,11 @@
         </x:Arguments>
     </NavigationPage>
     
-    <NavigationPage Title="Cookbook" IconImageSource="cookbook.png">
+    <!--NavigationPage Title="Cookbook" IconImageSource="cookbook.png">
         <x:Arguments>
             <Main:Cookbook/>
         </x:Arguments>
-    </NavigationPage>
+    </-->
 
     <NavigationPage Title="Criar" IconImageSource="criar.png">
         <x:Arguments>
@@ -31,11 +31,11 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Inv" IconImageSource="fridge.png">
+    <!--NavigationPage Title="Inv" IconImageSource="fridge.png">
         <x:Arguments>
             <Main:InvPage/>
         </x:Arguments>
-    </NavigationPage>
+    </-->
 
     <NavigationPage Title="Account" IconImageSource="profile.png">
         <x:Arguments>

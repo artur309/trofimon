@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <!--logout botao -->
-            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Style="{StaticResource FollowButton}" />
+            <Button Grid.Row="0" Text="Logout" VerticalOptions="Start" Clicked="LogoutBtn" Margin="0,30,0,0" Style="{StaticResource FollowButton}" />
 
             <!-- header background -->
             <Image Source="HeaderBackground.png" Aspect="AspectFill" />

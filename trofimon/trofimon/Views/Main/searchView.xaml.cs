@@ -1,11 +1,7 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Threading.Tasks;
 using trofimon.Models;
 using trofimon.ViewModel;
 using Xamarin.Forms;
@@ -28,11 +24,10 @@ namespace trofimon.Views.Main
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
             var receitas = await firebase
-                     .Child("Receitas")
-                     .OrderByKey()
-                     .OnceAsync<Receitas>();
+                 .Child("Receitas")
+                 .OrderByKey()
+                 .OnceAsync<Receitas>();
 
             foreach (var receita in receitas)
             {
@@ -41,7 +36,7 @@ namespace trofimon.Views.Main
             }
             listaReceitas.ItemsSource = ReceitaStringList;
         }
-        
+
         protected async override void OnDisappearing()
         {
             base.OnDisappearing();
@@ -50,11 +45,21 @@ namespace trofimon.Views.Main
             listaReceitas.ItemsSource = ReceitaStringList;
         }
 
-        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        private async void OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var texto = searchBar.Text;
+            if (string.IsNullOrWhiteSpace(texto))
+            {
+                ReceitaStringList.Clear();
+                listaReceitas.ItemsSource = ReceitaStringList;
+            }
             listaReceitas.ItemsSource = ReceitaStringList.Where(x => x.ToLower().Contains(texto.ToLower()));
+        }
 
+        private async void FooterIsVisible(object sender, TextChangedEventArgs e)
+        {
+            ReceitaStringList.Clear();
+            listaReceitas.ItemsSource = ReceitaStringList;
         }
     }
 }
