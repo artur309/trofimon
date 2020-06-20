@@ -2,8 +2,6 @@
 using Firebase.Database.Query;
 using System.Collections.ObjectModel;
 using trofimon.Models;
-using trofimon.ViewModel;
-using trofimon.ViewModels.Main;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,25 +10,21 @@ namespace trofimon.Views.Main
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReceitaDetailedView : ContentPage
     {
-        public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
+        private static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
+        private FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper();
         public ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
-        private LoginViewModel loginViewModel = new LoginViewModel();
-        private Receitas receitaDetalhes = new Receitas(); 
+        private Receitas receitaDetalhes = new Receitas();
 
         public ReceitaDetailedView(string receitaNome)
         {
             InitializeComponent();
-
             receitaDetalhes.NomeReceita = receitaNome;
-
             BindingContext = this;
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
-            ReceitaViewModel receitaViewModel = new ReceitaViewModel();
 
             var idCount = await firebase
                      .Child("Receitas")
@@ -44,9 +38,16 @@ namespace trofimon.Views.Main
                     receitaDetalhes.Ingredientes = id.Object.Ingredientes;
                     receitaDetalhes.Preparacao = id.Object.Preparacao;
                     receitaDetalhes.UserReceita = id.Object.UserReceita;
+                    receitaDetalhes.Imagem = id.Object.Imagem;
                     break;
                 }
             }
+
+            string path = await firebaseStorageHelper.GetFile(receitaDetalhes.Imagem, receitaDetalhes.UserReceita);
+
+            //this.Imagem.Text = receitaDetalhes.Imagem;
+            //Imagem.BindingContext = path;
+            imgReceita.Source = path;
 
             //BindingContext = receitaDetalhes;
 
@@ -66,8 +67,6 @@ namespace trofimon.Views.Main
             //preaparacao receita
             this.UserReceita.Text = receitaDetalhes.UserReceita;
             UserReceita.BindingContext = receitaDetalhes.UserReceita;
-
-            imgReceita.Source = "https://via.placeholder.com/300";
 
             BindingContext = this;
         }

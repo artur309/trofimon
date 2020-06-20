@@ -56,25 +56,14 @@ namespace trofimon.ViewModels.Main
             }
         }
 
-        private string imagem;
-        public string ImagemPath
+        private string receitaImagemPath;
+        public string ReceitaImagemPath
         {
-            get => imagem;
+            get => receitaImagemPath;
             set
             {
-                imagem = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("ImagemPath"));
-            }
-        }
-
-        private FileImageSource imgChoosed;
-        public FileImageSource ImgChoosed
-        {
-            get => imgChoosed;
-            set
-            {
-                imgChoosed = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("ImgChoosed"));
+                receitaImagemPath = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("ReceitaImagemPath"));
             }
         }
 
@@ -103,11 +92,8 @@ namespace trofimon.ViewModels.Main
 
         private async void GuardarReceita()
         {
-            //validação, email ou password não é preenchida
-            await App.Current.MainPage.DisplayAlert(ImagemPath, "Imagem", "OK");
-
-            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ImgChoosed, receitaPrivacidade);
-            //Adiciona User
+            //Adiciona Receita
+            var receita = await FirebaseHelper.AddReceita(UserReceita, NomeReceita, Ingredientes, Preparacao, ReceitaImagemPath, receitaPrivacidade);
             if (receita)
                 await App.Current.MainPage.DisplayAlert("Receita guardada com Sucesso", "Sucesso", "OK");
             else

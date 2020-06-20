@@ -31,10 +31,11 @@
                         <Button x:Name="btnCamera" WidthRequest="200" Text="Câmera" Clicked="CameraImg" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
                     <FlexLayout>
-                        <Label Text="Receita em privado" FontSize="18" Margin="0,6,25,0" /> 
-                        <Switch IsToggled="{Binding receitaPrivacidade}"/>
+                        <Label Text="Receita em privado" FontSize="18" Margin="0,6,25,0" />
+                        <Switch IsToggled="{Binding receitaPrivacidade}" />
                     </FlexLayout>
                     <Label x:Name="lblPath" Text="{Binding ImagemPath}" />
+                    <Entry x:Name="ReceitaImagemPath" IsReadOnly="True" IsVisible="false" Text="{Binding ReceitaImagemPath}" Style="{StaticResource StatsNumberLabel}" />
                 </StackLayout>
             </StackLayout>
 

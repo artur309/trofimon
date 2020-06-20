@@ -1,27 +1,21 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using trofimon.ViewModels.Main;
-using Xamarin.Forms;
-using Xamarin.Essentials;
-using Xamarin.Forms.Xaml;
-using Plugin.Media;
+﻿using Plugin.Media;
 using Plugin.Media.Abstractions;
+using System;
 using System.Diagnostics;
 using System.IO;
-using Plugin.Permissions.Abstractions;
-using trofimon.ViewModels;
-using trofimon.Views;
+using trofimon.ViewModels.Main;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace trofimon.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReceitaPage : ContentPage
     {
-        FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper();
-        ReceitaViewModel receitaViewModel;
-        MediaFile file;
+        private FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper();
+        private ReceitaViewModel receitaViewModel;
+        private MediaFile file;
 
         public ReceitaPage()
         {
@@ -55,6 +49,7 @@ namespace trofimon.Views.Main
                 {
                     return file.GetStream();
                 });
+                ReceitaImagemPath.Text = $"{Path.GetFileName(file.Path)}";
             }
             catch (Exception ex)
             {
@@ -86,6 +81,7 @@ namespace trofimon.Views.Main
                 {
                     return file.GetStream();
                 });
+                ReceitaImagemPath.Text = $"{Path.GetFileName(file.Path)}";
             }
             catch (Exception ex)
             {
