@@ -61,5 +61,10 @@ namespace trofimon.Views.Main
             ReceitaStringList.Clear();
             listaReceitas.ItemsSource = ReceitaStringList;
         }
+
+        private async void listaViewReceitas_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            await Navigation.PushAsync(new ReceitaDetailedView(e.Item.ToString()));
+        }
     }
 }

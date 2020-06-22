@@ -17,8 +17,8 @@ namespace trofimon.Droid
     {
         public void closeApplication()
         {
-            var activity = (Activity)Forms.Context;
-            activity.FinishAffinity();
+            //var activity = (Activity)Forms.Context;
+            //activity.FinishAffinity();
         }
     }
 }
