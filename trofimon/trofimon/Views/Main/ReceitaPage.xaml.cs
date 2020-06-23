@@ -45,10 +45,8 @@ namespace trofimon.Views.Main
 
                 if (file == null) return;
 
-                imgChoosed.Source = ImageSource.FromStream(() =>
-                {
-                    return file.GetStream();
-                });
+                imgChoosed.Source = ImageSource.FromStream(() => { return file.GetStream(); });
+
                 ReceitaImagemPath.Text = $"{Path.GetFileName(file.Path)}";
             }
             catch (Exception ex)
@@ -71,16 +69,12 @@ namespace trofimon.Views.Main
                 if (permissoes != Xamarin.Essentials.PermissionStatus.Granted)
                     return;
 
-                file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions() { });
+                //file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions() {});
 
                 if (file == null) return;
 
-                //if (file != null) imgChoosed.Source = ImageSource.FromStream(() => { return file.GetStream(); });
+                if (file != null) imgChoosed.Source = ImageSource.FromStream(() => { return file.GetStream(); });
 
-                imgChoosed.Source = ImageSource.FromStream(() =>
-                {
-                    return file.GetStream();
-                });
                 ReceitaImagemPath.Text = $"{Path.GetFileName(file.Path)}";
             }
             catch (Exception ex)

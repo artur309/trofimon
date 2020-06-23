@@ -16,8 +16,6 @@ namespace trofimon.Views.Main
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainTab : Xamarin.Forms.TabbedPage
     {
-        WelcomePageVM welcomePageVM;
-
         public MainTab(string email)
         {
             InitializeComponent();
@@ -32,9 +30,6 @@ namespace trofimon.Views.Main
             //adicionar os icones no UWP
             On<Windows>().SetHeaderIconsSize(new Size(20, 20));
             On<Windows>().SetHeaderIconsEnabled(true);
-
-            welcomePageVM = new WelcomePageVM(email);
-            BindingContext = welcomePageVM;
         }
     }
 }
