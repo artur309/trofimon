@@ -33,7 +33,7 @@
 
             <!-- Profile Name -->
             <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
-                <Label x:Name="labelNameProfile" HorizontalTextAlignment="Center" Text="{Binding Email}" Style="{StaticResource ProfileNameLabel}" />
+                <Label x:Name="labelNameProfile" Style="{StaticResource StatsNumberLabel}" />
                 <Label HorizontalTextAlignment="Center" Text="Cozinheiro Master" Margin="0,-10" Style="{StaticResource ProfileTagLabel}" />
             </StackLayout>
 

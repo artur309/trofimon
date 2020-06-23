@@ -40,6 +40,7 @@ namespace trofimon.Views.Main
                     ReceitaStringList.Add(receita.Object.NomeReceita);
                     countReceitas++;
                 }
+                labelNameProfile.Text = receita.Object.UserReceita;
             }
 
             listaViewReceitas.ItemsSource = null;
