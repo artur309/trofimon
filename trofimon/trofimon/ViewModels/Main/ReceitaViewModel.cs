@@ -98,6 +98,7 @@ namespace trofimon.ViewModels.Main
                 await App.Current.MainPage.DisplayAlert("Receita guardada com Sucesso", "Sucesso", "OK");
             else
                 await App.Current.MainPage.DisplayAlert("Erro ao guardar receita", "Error", "OK");
+            UserReceita = ""; NomeReceita = ""; Ingredientes = ""; Preparacao = ""; ReceitaImagemPath = ""; receitaPrivacidade = false;
         }
     }
 }
