@@ -1,14 +1,6 @@
-﻿using EncryptStringSample;
-using Plugin.Settings;
-using Plugin.Settings.Abstractions;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Text;
-using System.Windows.Input;
-using trofimon.Views;
-using trofimon.Views.Form;
 using trofimon.Views.Main;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -71,8 +63,7 @@ namespace trofimon.ViewModel
         {
             //validação, email ou password não é preenchida
             if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
-                await App.Current.MainPage.DisplayAlert("Valores vazios", "Inseria Email ou Password", "OK");
-
+                await App.Current.MainPage.DisplayAlert("Valores vazios", "Insira Email ou Password", "OK");
             else
             {
                 var user = await FirebaseHelper.GetUser(Email);
@@ -83,15 +74,16 @@ namespace trofimon.ViewModel
                     if (Email == user.Email && Password == user.Password)
                     {
                         //da-se o login e é enviado a informacao do utilizador pra mainPage
-                        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                        await App.Current.MainPage.DisplayAlert("Login Sucesso", "", "Ok");
+                        await App.Current.MainPage.Navigation.PopAsync();
+                        await App.Current.MainPage.Navigation.PopAsync();
                         await App.Current.MainPage.Navigation.PushAsync(new MainTab(Email));
                     }
                     else
-                        await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
+                        await App.Current.MainPage.DisplayAlert("Falha Login", "Insira os dados corretos", "OK");
                 }
                 else
-                    await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
-
+                    await App.Current.MainPage.DisplayAlert("Falha Login", "Utilizador não encontrado", "OK");
             }
         }
     }

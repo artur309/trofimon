@@ -1,22 +1,13 @@
-﻿using System;
+﻿using Firebase.Database;
+using Firebase.Database.Query;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
-using Firebase.Auth;
-using Firebase.Database;
-using Firebase.Database.Query;
 using trofimon.Models;
-using trofimon.ViewModel;
-using trofimon.Views;
-using trofimon.Views.Form;
-using trofimon.Views.Main;
 using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace trofimon.ViewModel
 {
@@ -46,7 +37,7 @@ namespace trofimon.ViewModel
             }
         }
 
-        //Read 
+        //Read
         public static async Task<Users> GetUser(string email)
         {
             try
@@ -69,7 +60,7 @@ namespace trofimon.ViewModel
         {
             try
             {
-                //id automatico 
+                //id automatico
                 int IDUser = 0;
                 var idCount = await firebase
                          .Child("Users")
@@ -93,10 +84,9 @@ namespace trofimon.ViewModel
                         accountAvailable = false;
                 }
 
-                //guarda novo user 
+                //guarda novo user
                 if (accountAvailable == false)
                     return false;
-
                 else
                 {
                     Debug.WriteLine("Erro");
@@ -119,7 +109,7 @@ namespace trofimon.ViewModel
             }
         }
 
-        //Atualizar utilizador 
+        //Atualizar utilizador
         public static async Task<bool> UpdateUser(string email, string password)
         {
             try
@@ -248,6 +238,24 @@ namespace trofimon.ViewModel
                     Imagem = imagem,
                     Privacidade = privacidade,
                 });
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return false;
+            }
+        }
+
+        //Apagar Receita
+        public static async Task<bool> ApagarReceita(string receitaNome)
+        {
+            try
+            {
+                var toDeletePerson = (await firebase
+                    .Child("Receitas")
+                    .OnceAsync<Receitas>()).Where(a => a.Object.NomeReceita == receitaNome).FirstOrDefault();
+                await firebase.Child("Receitas").Child(toDeletePerson.Key).DeleteAsync();
                 return true;
             }
             catch (Exception e)

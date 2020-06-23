@@ -21,22 +21,24 @@
                     <RowDefinition Height="AUTO" />
                 </Grid.RowDefinitions>
 
-                <!--Label Grid.Row="0" Text="Imagem"  FontAttributes="Bold" FontSize="Body"/>
+                <Button x:Name="BotaoApagar" Grid.Row="0" Margin="100,000" Text="Apagar" IsVisible="false" Clicked="ApagarReceita" />
+
+                <!--Label Grid.Row="0" Text="Imagem"  FontAttributes="Bold" FontSize="Body" />
                 <Label Grid.Row="0" x:Name="Imagem" Text="2{Binding Imagem}" Margin="0,20" /-->
-
-                <Label Grid.Row="1" x:Name="NomeReceita" Text="2{Binding NomeReceita}"  HorizontalOptions="CenterAndExpand" Margin="10,10" FontSize="Large" TextColor="Black"/>
-
                 <!--Label BackgroundColor="#B8B880" Grid.Row="1" Text="Imagem" Margin="0,10"/-->
-                <Image x:Name="imgReceita" />
+                
+                <Image x:Name="imgReceita" Grid.Row="1" HeightRequest="100" WidthRequest="100"/>
 
-                <Label Grid.Row="2" Text="Utilizador" FontAttributes="Bold" FontSize="Body"/>
-                <Label Grid.Row="2"  x:Name="UserReceita" Text="2{Binding UserReceita}" Margin="0,20" />
+                <Label Grid.Row="2" x:Name="NomeReceita" Text="2{Binding NomeReceita}"  HorizontalOptions="CenterAndExpand" Margin="10,10" FontSize="Large" TextColor="Black" />
 
-                <Label Grid.Row="3" BackgroundColor="White" Text="Ingredientes" FontAttributes="Bold" FontSize="Large"/>
-                <Label Grid.Row="3" x:Name="Ingredientes" Text="2{Binding Ingredientes}" Margin="100,50" />
+                <Label Grid.Row="3" Text="Utilizador" FontAttributes="Bold" FontSize="Large" />
+                <Label Grid.Row="3"  x:Name="UserReceita" Text="2{Binding UserReceita}" Margin="0,20" />
 
-                <Label Grid.Row="4" BackgroundColor="White" Text="Preparacao" FontAttributes="Bold" FontSize="Large"/>
-                <Label Grid.Row="4" HorizontalOptions="Start"  x:Name="Preparacao" Text="2{Binding Preparacao}" Margin="100,50" />
+                <Label Grid.Row="4" BackgroundColor="White" Text="Ingredientes" FontAttributes="Bold" FontSize="Large" />
+                <Label Grid.Row="4" x:Name="Ingredientes" Text="2{Binding Ingredientes}" Margin="100,50" />
+
+                <Label Grid.Row="5" BackgroundColor="White" Text="Preparacao" FontAttributes="Bold" FontSize="Large" />
+                <Label Grid.Row="5" HorizontalOptions="Start"  x:Name="Preparacao" Text="2{Binding Preparacao}" Margin="100,50" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

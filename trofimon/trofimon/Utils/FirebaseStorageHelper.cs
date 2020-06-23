@@ -31,11 +31,11 @@ namespace trofimon
                 .GetDownloadUrlAsync();
         }
 
-        public async Task DeleteFile(string fileName)
+        public async Task DeleteFile(string fileName, string user)
         {
             await firebaseStorage
                 .Child("Receitas")
-                .Child(Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                .Child(user)
                 .Child(fileName)
                 .DeleteAsync();
         }

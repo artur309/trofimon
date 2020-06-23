@@ -1,7 +1,10 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
+using System;
 using System.Collections.ObjectModel;
 using trofimon.Models;
+using trofimon.ViewModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +17,8 @@ namespace trofimon.Views.Main
         private FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper();
         public ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
         private Receitas receitaDetalhes = new Receitas();
+        private LoginViewModel loginViewModel = new LoginViewModel();
+        private string receitaKey;
 
         public ReceitaDetailedView(string receitaNome)
         {
@@ -39,6 +44,7 @@ namespace trofimon.Views.Main
                     receitaDetalhes.Preparacao = id.Object.Preparacao;
                     receitaDetalhes.UserReceita = id.Object.UserReceita;
                     receitaDetalhes.Imagem = id.Object.Imagem;
+                    receitaKey = id.Key;
                     break;
                 }
             }
@@ -64,11 +70,27 @@ namespace trofimon.Views.Main
             Preparacao.BindingContext = receitaDetalhes.Preparacao;
             //ReceitaNome.SetBinding(Label.text);
 
-            //preaparacao receita
+            //user receita
             this.UserReceita.Text = receitaDetalhes.UserReceita;
             UserReceita.BindingContext = receitaDetalhes.UserReceita;
 
+            if (this.UserReceita.Text == Preferences.Get(loginViewModel.Email, loginViewModel.Email))
+                BotaoApagar.IsVisible = true;
+
             BindingContext = this;
+        }
+
+        private async void ApagarReceita(object sender, EventArgs e)
+        {
+            await firebase
+                    .Child("Receitas")
+                    .Child(receitaKey)
+                    .DeleteAsync();
+            await firebaseStorageHelper.DeleteFile(receitaDetalhes.Imagem, receitaDetalhes.UserReceita);
+
+            await DisplayAlert("Sucedido", "Receita apagada com sucesso", "OK");
+
+            Navigation.PopAsync();
         }
     }
 }

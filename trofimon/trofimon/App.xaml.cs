@@ -1,13 +1,8 @@
-﻿using System;
-using System.Diagnostics;
-using trofimon.ViewModel;
-using trofimon.Views;
+﻿using trofimon.ViewModel;
 using trofimon.Views.Form;
 using trofimon.Views.Main;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace trofimon
 {
@@ -19,8 +14,21 @@ namespace trofimon
             InitializeComponent();
             //MainPage = new NavigationPage();
             //MainPage = new NavigationPage(new Views.Main.MainTab("41"));
-            MainPage = new NavigationPage(new Intro());
-            //MainPage = new NavigationPage(new FormTab());
+            if (loginViewModel.lembrarSessao == true)
+            {
+                //verifficar se tem sessao variabel
+                if (Current.Properties.ContainsKey("Email"))
+                {
+                    //App.Current.MainPage.Navigation.PopAsync();
+                    //string userId = ;
+                    //Current.MainPage.Navigation.PopAsync();
+                    MainPage = new MainTab(Preferences.Get(loginViewModel.Email, loginViewModel.Email));
+                }
+                //MainPage = new NavigationPage(new FormTab());
+            }
+            else
+                MainPage = new NavigationPage(new Intro());
+
         }
 
         public interface ICloseApplication
@@ -29,19 +37,20 @@ namespace trofimon
         }
 
         // Handle when your app starts
-        protected override void OnStart()
+        protected async override void OnStart()
         {
 
-            if (loginViewModel.lembrarSessao == true)
+           /* if (loginViewModel.lembrarSessao == true)
             {
                 //verifficar se tem sessao variabel
                 if (Current.Properties.ContainsKey("Email"))
                 {
                     //App.Current.MainPage.Navigation.PopAsync();
-                    string userId = loginViewModel.Email;
-                    Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(userId, userId)));
+                    //string userId = ;
+                    App.Current.MainPage.Navigation.PopAsync();
+                    Current.MainPage.Navigation.PushModalAsync(new MainTab(Preferences.Get(loginViewModel.Email, loginViewModel.Email)));
                 }
-               // Current.MainPage.DisplayAlert("Ligado", "", "Ok");
+                // Current.MainPage.DisplayAlert("Ligado", "", "Ok");
             }
             else
             {

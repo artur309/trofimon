@@ -14,6 +14,7 @@ namespace trofimon.Views.Main
     {
         public static readonly FirebaseClient firebase = new FirebaseClient("https://trofimon-pap.firebaseio.com/");
         private ObservableCollection<string> ReceitaStringList { get; set; } = new ObservableCollection<string>();
+        private ObservableCollection<string> ReceitaImgStringList { get; set; } = new ObservableCollection<string>();
         private LoginViewModel loginViewModel = new LoginViewModel();
 
         public Home()
@@ -33,11 +34,16 @@ namespace trofimon.Views.Main
             foreach (var receita in receitas)
             {
                 if (receita.Object.Privacidade == false)
+                {
                     ReceitaStringList.Add(receita.Object.NomeReceita);
+                    ReceitaImgStringList.Add(receita.Object.Imagem);
+                }
             }
 
             listaViewReceitas.ItemsSource = null;
             listaViewReceitas.ItemsSource = ReceitaStringList;
+
+            //imgReceita.Source = "https://via.placeholder.com/300";
         }
 
         protected async override void OnDisappearing()
