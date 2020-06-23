@@ -3,6 +3,7 @@
 
 Projeto da PAP
 Aplicação cross-platform de receitas tudo numa Rede Social
+Board no [Trello](https://trello.com/b/lz1jJrKq/trofimon)
 
 # Aspetos
 
