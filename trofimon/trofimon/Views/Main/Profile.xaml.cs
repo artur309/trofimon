@@ -33,20 +33,23 @@ namespace trofimon.Views.Main
                      .OrderByKey()
                      .OnceAsync<Receitas>();
 
+            string nome = null;
             foreach (var receita in receitas)
             {
                 if (receita.Object.UserReceita == Preferences.Get(loginViewModel.Email, loginViewModel.Email))
                 {
                     ReceitaStringList.Add(receita.Object.NomeReceita);
                     countReceitas++;
+                    nome = receita.Object.UserReceita;
                 }
-                labelNameProfile.Text = receita.Object.UserReceita;
             }
 
             listaViewReceitas.ItemsSource = null;
             listaViewReceitas.ItemsSource = ReceitaStringList;
 
-            receitasLabel.Text = ""+countReceitas;
+            receitasLabel.Text = "" + countReceitas;
+            labelNameProfile.Text = "" + nome;
+
             BindingContext = this;
         }
 
@@ -65,7 +68,7 @@ namespace trofimon.Views.Main
                 lembrarSessao = false
             };
             Application.Current.SavePropertiesAsync();
-            App.Current.MainPage.Navigation.PopModalAsync();
+            App.Current.MainPage.Navigation.PopAsync();
         }
 
         private async void listaViewReceitas_ItemTapped(object sender, ItemTappedEventArgs e)
